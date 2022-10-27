@@ -2,6 +2,7 @@
 
 Smith College CSC223: Software Engineering\
 Starter App for ValetBike project
+Team Really Good Name
 
 ## Environment Configuration
 
