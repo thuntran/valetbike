@@ -6,6 +6,7 @@ Team Really Good Name (RGN)
 Members: 
 Annie Karitonze
 Asher Uman
+Thu Tran
 
 ## Environment Configuration
 
