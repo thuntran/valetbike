@@ -3,7 +3,7 @@
 Smith College CSC223: Software Engineering
 Starter App for ValetBike project
 Team Really Good Name (RGN)
-Members: Asher Uman
+Members: Asher Uman, Annie Karitonze
 
 ## Environment Configuration
 
