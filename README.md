@@ -1,7 +1,10 @@
 # ValetBike
 
-Smith College CSC223: Software Engineering\
+Smith College CSC223: Software Engineering
 Starter App for ValetBike project
+Team Really Good Name (RGN)
+Members: 
+Annie Karitonze
 Asher Uman
 
 ## Environment Configuration
