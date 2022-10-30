@@ -83,3 +83,5 @@ gem 'devise'
 # gem 'paperclip
 # gem 'uniquify'
 # gem 'will_paginate'
+
+gem "tabs_on_rails"

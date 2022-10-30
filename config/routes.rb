@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
+ 
+  
+  
+  get "homepage/index" => "homepage#index"
+  root to: "homepage#index"
   devise_for :users
-  root to: "stations#index"
+  get 'stations/index'
+  get 'help/index'
+  get 'about/index'
+  get 'pricing_and_payment/index'
+
+  
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

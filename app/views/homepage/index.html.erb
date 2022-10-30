@@ -1,0 +1,36 @@
+<div class="page-section flexbox vertical stretch">
+  <div class="section-inner flexbox vertical stretch">
+    <div class="section-title">
+      <div class="header">
+        <h1>ValetBike</h1>
+      </div> 
+    </div>
+    <div class="flexbox vertical stretch">
+      <%= link_to("Stations Map", {controller: "stations", action: "index"}) %><br />
+      <%= link_to("Pricing and Payment", {controller: "pricing_and_payment", action: "index"}) %><br />
+      <%= link_to("About", {controller: "about", action: "index"}) %><br />
+      <%= link_to("Help", {controller: "help", action: "index"}) %><br />
+    </div> 
+
+    <div class="flexbox vertical stretch">
+      <p> Basic Instructions</p>
+      <p> Bike Fun</p>
+      <p> News </p>
+    </div> 
+
+
+    <div class="flexbox vertical stretch">
+
+      <% if user_signed_in? %>
+        Signed in as <%= current_user.username %>
+        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+      
+      <% else %>
+      <div class="empty">
+        Not signed in <br>
+        <%= link_to 'Sign in', '/users/sign_in' %>
+      </div>
+      <% end %>
+    </div>
+	</div>
+</div>
