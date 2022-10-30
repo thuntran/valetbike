@@ -7,8 +7,8 @@ Members:\
 Annie Karitonze\
 Asher Uman\
 Thu Tran\
-Manar Alnazer\
-
+Sarah Branch\
+Manar ALnazer\
 ## Environment Configuration
 
 As you configure your environment you should **keep a log** where you **write down all the steps you take** including **each command you type**. You will inevitably run into errors setting up your development environment and maintaining a meticulous log will allow others to help you troubleshoot. Ignore this recommendation at your own peril, but don't say you haven't been warned :]
