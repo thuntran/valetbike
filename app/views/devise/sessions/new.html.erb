@@ -28,4 +28,15 @@
   </div>
 <% end %>
 
+<%# flash[:alert] = "Wrong password" %> 
+<div class="alert">
+  <% if flash[:notice] %>
+        <p class="alert"><%= flash[:notice] %></p>
+  <% end %>
+  <% if flash[:alert] %>
+        <%#  flash[:alert] %> 
+        <p class="alert"><%= flash[:not_found_in_database] %></p>
+  <% end %>
+</div>
+
 <%= render "devise/shared/links" %>
