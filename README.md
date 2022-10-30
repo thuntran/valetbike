@@ -7,6 +7,7 @@ Members:\
 Annie Karitonze\
 Asher Uman\
 Thu Tran\
+Sarah Branch\
 
 ## Environment Configuration
 
