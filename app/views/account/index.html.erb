@@ -1,0 +1,28 @@
+<div class="page-section flexbox vertical stretch">
+  <div class="section-inner flexbox vertical stretch">
+    <div class="section-title">
+      <div class="header">
+          <h1><strong>My Account</strong></h1>
+        </div>
+      </div>
+  
+      <div class="flexbox vertical stretch">
+      <% if user_signed_in? %>
+        Signed in as <%= current_user.username %><br/>
+        Email address: <%= current_user.email %><br/>
+        [Add later: change password]</br>
+        Balance: $<%= "%0.2f"% [current_user.balance] %><br/>
+        Favorite Stations: [Add later]</br>
+        Ride History: [Add later]<br/>
+        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+      
+      <% else %>
+      <div class="empty">
+        Not signed in <br>
+        <%= link_to 'Sign in', '/users/sign_in' %>
+      </div>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>
