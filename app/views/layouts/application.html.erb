@@ -19,6 +19,23 @@
     <div id="site-container" class="flexbox vertical stretch flex-1">
       <div class="flexbox vertical center">
         <%= yield %>
+        <ul class="navbar">
+
+          <li><a href="/"> ValetBike </a></li>
+          <li><a href="/about/index"> About </a></li>
+          <li><a href="/help/index"> Basic Instructions </a></li>
+          <li><a href="/stations/index"> Map </a></li>
+          <% if user_signed_in? %>
+                <li style="float: right;" ><a> Signed in as <%= current_user.username%></a>
+      
+          <% else %>
+            <div class="empty">                                
+                <li style="float: right;"><a href='/users/sign_in'>Login</a></li>
+            </div>
+          <% end %>
+
+        </ul>
+        
       </div>
     </div>
   </body>
