@@ -34,16 +34,16 @@
   background: var(--dark-white-color);
 }
 
-ul {
+ul.navbar {
   margin: 0;
   padding: 1;
   overflow: hidden;
-  background-color: #006400;
+  background-color: #0f589d;
   position: fixed;
   width: 100%;
 }
 
-li {
+li.navbar-button {
   float: left;
 }
 
@@ -56,7 +56,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #0e6d0e;
+  background-color: #04e0f4;
 }
 
 /***********************************/

@@ -21,11 +21,11 @@
         <%= yield %>
         <ul class="navbar">
 
-          <li><a href="/">ValetBike</a></li>
-          <li><a href="/stations/index">Station Map/List</a></li>
-          <li><a href="/pricing_and_payment/index">Pricing and Payment</a></li>
-          <li><a href="/about/index">About</a></li>
-          <li><a href="/help/index">Help</a></li>
+          <li class="navbar-button"><a href="/">ValetBike</a></li>
+          <li class="navbar-button"><a href="/stations/index">Station Map/List</a></li>
+          <li class="navbar-button"><a href="/pricing_and_payment/index">Pricing and Payment</a></li>
+          <li class="navbar-button"><a href="/about/index">About</a></li>
+          <li class="navbar-button"><a href="/help/index">Help</a></li>
           
           <% if user_signed_in? %>
                 <li style="float: right;" ><a> Signed in as <%= current_user.username%></a>
