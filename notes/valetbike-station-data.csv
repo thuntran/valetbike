@@ -1,0 +1,6 @@
+identifier,name,has_kiosk,needs_maintenance,dock_count,docked_bike_count,address
+26,John M Greene Hall/Smith College,0,0,16,5,1 Chapin Way Northampton MA @ John M. Greene Hall
+23,Forbes Library,0,0,13,6,20 West Street Northampton MA
+27,Pulaski Park/Downtown,1,0,11,3,274 Main Street Northampton MA at Pulaski Park
+31,Main Street/Court House,0,1,10,3,99 Main Street Northampton MA
+32,Main Street/Bridge Street,0,0,15,8,1 Bridge Street Northampton MA
