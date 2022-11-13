@@ -22,6 +22,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_06_205955) do
     t.integer "identifier"
     t.string "name"
     t.string "address"
+    t.integer "dock_count"
+    t.integer "docked_bike_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
