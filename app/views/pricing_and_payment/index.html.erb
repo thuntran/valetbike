@@ -7,7 +7,7 @@
 
 
   <form>
-  <select name = "stations">
+  <select name = "station">
   <% @stations.each do |station|%>
     <option><%=station.address%></option>
   <%end%>
@@ -15,15 +15,37 @@
   <br/>
   <input type="submit" value="select station">
   </form>
-<%= form_with method: :get do |form|%>
+
+  <% if params[:station] or params[:bike]%>
+  <br/>
+  Bikes at <%=@chosenStation.address %>:
+    <form>
+  <select name = "bike">
+  <% @theseBikes.each do |bike|%>
+    <option><%=bike.identifier%></option>
+  <%end%>
+  </select>
+  <br/>
+  <input type="submit" value="select bike">
+  </form>
+  <br/>
+  <%if params[:bike]%>
+    Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.address%>
+    <br/>
+    <input type="submit" class="button" value="start ride" onclick="window.location = '/ride'">
+    <br/>
+    <%= link_to 'Start Ride', ride_path(@chosenBike.identifier)%>
+  <%end%>
+  <% end%>
+<%#= form_with method: :get do |form|%>
  
-  <%= form.select :station, @stations %>
-  <%=@stations%>
+  <%#= form.select :station, @stations %>
+  <%#=@stations%>
   <!-- having an input tag with submit type and then have backend in the controller to process the input
   params in ruby to filter through list 
   
   -->
 
-<%end%>
+<%#end%>
 	</div>
 </div>
