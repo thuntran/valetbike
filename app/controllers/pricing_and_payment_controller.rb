@@ -1,4 +1,7 @@
 class PricingAndPaymentController < ApplicationController
+  
+  @bike = Bike.find_by(identifier: 1234)
+
   def index
     @stations = Station.all.order(identifier: :asc)
     @bikes = Bike.all.order(identifier: :asc)
@@ -16,6 +19,6 @@ class PricingAndPaymentController < ApplicationController
   end
 
   def ride
-    #@bike = Bike.find_by(identifier: params[:bike])
+    #@bike = Bike.find(identifier: params[:identifier])
   end
 end

@@ -34,7 +34,7 @@
     <br/>
     <input type="submit" class="button" value="start ride" onclick="window.location = '/ride'">
     <br/>
-    <%= link_to 'Start Ride', ride_path(@chosenBike.identifier)%>
+    <%= link_to 'Start Ride', ride_path(@chosenBike)%>
   <%end%>
   <% end%>
 <%#= form_with method: :get do |form|%>

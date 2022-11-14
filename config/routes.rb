@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   get 'pricing_and_payment/index'
 
   resources :rides
-  #get '/ride'  => "pricing_and_payment#ride"
-  #get '/ride/:id', to: 'pricing_and_payment#ride', as: 'bike'
+  #get '/ride/:id'  => "pricing_and_payment#ride"
+  get '/ride/:id', to: 'pricing_and_payment#ride', as: 'bike'
 
   
 
