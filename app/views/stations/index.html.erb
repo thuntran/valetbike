@@ -46,26 +46,23 @@
           </div>
           <div id="map"></div>
           <script>
-            var map = L.map('map').setView([42.3163031, -72.6424982], 13);
+            var map = L.map('map').setView([42.3163031, -72.6424982], 13); // centered at Smith College
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 19,
               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
             var pulaskiMarker = L.marker([42.3173232, -72.6330437]).addTo(map);
-            pulaskiMarker.bindPopup("Pulaski Park");
-            var ForbesLibMarker = L.marker([42.316749, -72.635711]).addTo(map);
-            ForbesLibMarker.bindPopup("Forbes Library");
-            var JMGMarker = L.marker([42.3194444, -72.6380556]).addTo(map);
-            JMGMarker.bindPopup("John M Greene");
-            var OneBridgeStreetMarker = L.marker([42.3204713, -72.6280986]).addTo(map);
-            OneBridgeStreetMarker.bindPopup("1 Bridge Street");
-            var NineNineMainStMarker = L.marker([42.319515, -72.6305933]).addTo(map);
-            NineNineMainStMarker.bindPopup("99 Main Street");
+            pulaskiMarker.bindPopup("<a href='https://goo.gl/maps/DrLW1RmmBFJePwGR6' target='_blank'>Pulaski Park</a>");
+            var forbesLibMarker = L.marker([42.316749, -72.635711]).addTo(map);
+            forbesLibMarker.bindPopup("<a href='https://goo.gl/maps/WvWT6oWJWc9wqsLt5' target='_blank'>Forbes Library</a>");
+            var JMGMarker = L.marker([42.3194483, -72.6402443]).addTo(map);
+            JMGMarker.bindPopup("<a href='https://goo.gl/maps/9LzMWy66P5jvre8XA' target='_blank'>John M. Greene</a>");
+            var oneBridgeStreetMarker = L.marker([42.3204752, -72.6325833]).addTo(map);
+            oneBridgeStreetMarker.bindPopup("<a href='https://goo.gl/maps/9E5gRdPnPTodrmaj9' target='_blank'>Main Street/Bridge Street</a>");
+            var ninetyNineMainStMarker = L.marker([42.3195189, -72.632782]).addTo(map);
+            ninetyNineMainStMarker.bindPopup("<a href='https://goo.gl/maps/Wb5CZzD9pcWNzbCJ7' target='_blank'>Main Street/Court House</a>");
             
           </script>
-          
-          <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23602.094674435328!2d-72.6368256!3d42.3156138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1667497634051!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-          <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1SXPLK3a8wCOBcI1kvsLYRy0PrOVlZJU&ehbc=2E312F" width="640" height="480"></iframe> -->
         </div>
         <div class="stations-list">
           <div class="stations-list-title">
