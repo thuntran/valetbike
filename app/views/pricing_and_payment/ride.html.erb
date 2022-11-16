@@ -3,8 +3,17 @@
     <div class="section-title">
       Ride
     </div>  
-    You are riding <%= @bike.identifier %>. 
-    Ride started at [time] from [station].
-    <input type="submit" class="button" value="end ride" onclick="window.location = 'pricing_and_payment/ride'"> <!--change redirect-->
+
+    You are riding bike #<%= @bike.identifier %>. 
+    Ride started at <%= @ride.start_time%> from <%= Station.find(id = @ride.start_station_id).name %>.
+    <br/> TESTS: <br/>
+    Ride bike = <%= @ride.bike_id%><br/>
+    Bike's current user = <%= User.find(id = @bike.current_user_id).username %><br/>
+    Bike's current station = <%=@bike.current_station_id%><br/>
+    ACTUAL bike's current station = <%=Bike.find(id = @bike.id).current_station_id%><br/>
+    Start station ID =<%=@ride.start_station_id%><br/>
+    Start station bikes = <%= Station.find(id= @ride.start_station_id).docked_bikes %>
+    <br/>
+    <input type="submit" class="button" value="End Ride" onclick="window.location = 'pricing_and_payment/ride'"> <!--change redirect-->
 	</div>
 </div>

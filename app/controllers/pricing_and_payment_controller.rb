@@ -17,8 +17,4 @@ class PricingAndPaymentController < ApplicationController
       @theseBikes = @chosenStation.docked_bikes
     end
   end
-
-  def ride
-    #@bike = Bike.find(identifier: params[:identifier])
-  end
 end
