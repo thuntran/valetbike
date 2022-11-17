@@ -34,30 +34,6 @@
   background: var(--dark-white-color);
 }
 
-ul.navbar {
-  margin: 0;
-  padding: 1;
-  overflow: hidden;
-  background-color: #0f589d;
-  position: fixed;
-  width: 100%;
-}
-
-li.navbar-button {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #0563c7;
-}
 
 /***********************************/
 /*         Responsiveness          */

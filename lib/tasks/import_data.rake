@@ -10,6 +10,7 @@ namespace :import_data do
             b = Bike.new
             b.identifier = row["identifier"]
             b.current_station_id = row["current_station_identifier"]
+            b.battery_percentage = row["battery_percentage"]
             b.save
         end
 

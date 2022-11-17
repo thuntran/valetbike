@@ -14,27 +14,66 @@
   </head>
 
   <body>
+  
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <div id="site-container" class="flexbox vertical stretch flex-1">
       <div class="flexbox vertical center">
-        <%= yield %>
-        <ul class="navbar">
-          <li class="navbar-button"><a href="/">ValetBike</a></li>
-          <li class="navbar-button"><a href="/stations/index">Station Map/List</a></li>
-          <li class="navbar-button"><a href="/pricing_and_payment/index">Pricing and Payment</a></li>
-          <li class="navbar-button"><a href="/about/index">About</a></li>
-          <li class="navbar-button"><a href="/help/index">Help</a></li>
-          
-          <% if user_signed_in? %>
-                <li style="float: right;" ><a> Signed in as <%= current_user.username%></a>
-          <% else %>
-            <div class="empty">                                
-                <li style="float: right;"><a href='/users/sign_in'>Login</a></li>
+      <nav style="width:100%; z-index: 2;">
+
+      <ul style="background-color: #61a961;">
+        <li><a href="/">ValetBike</a></li>
+        <li><a href="/stations/index">Station Map/List</a></li>
+        <li><a href="/help/index">Help</a></li>
+        <li><a href="/about/index">About</a></li>
+        <li><a href="/pricing_and_payment/index">Pricing and Payment</a></li>
+        <% if !(user_signed_in?)  %>
+        <div class="empty" style="float:right;">
+          <li><a href='/users/sign_in' >Login</a></li>
+        </div>
+        <% else %>
+
+          <div class="user-info" style="float:right">
+            <li><a>Signed in as <%= current_user.username%></a></li>
+          </div>
+          <hr>
+
+        <%end%>
+
+      </ul>
+      <div id="subMenu">
+            <div class="sub-menu-link">
+            <p> Profile  > </p>
+            <span> </span> <br>
             </div>
-          <% end %>
-        </ul>
+            <div class="sub-menu-link" style="margin-top: 40px;">
+            <p> <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> > </p>
+            <span> </span> <br>
+            </div>
+      </div>
+    </nav>
+        <%= yield %>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js%22%3E</script>
+    <script>
+
+      $(document).ready(function(){
+        let subMenu = document.getElementById('subMenu');
+        $.fn.toggleMenu = function(){
+
+          if (subMenu.style.display == 'none'){
+            subMenu.style.display = 'block';
+          }
+        else {
+          subMenu.style.display = 'none';
+        }
+      }
+      
+      $('.user-info').click(function(){
+        $.fn.toggleMenu();
+      });
+      });
+    </script>
   </body>
 </html>
