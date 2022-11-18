@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :rides
   #get '/ride/:id'  => "pricing_and_payment#ride"
-  get '/ride/:id', to: 'pricing_and_payment#ride', as: 'bike'
+  #get '/ride/:id', to: 'pricing_and_payment#ride', as: 'bike'
 
   
 

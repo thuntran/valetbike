@@ -4,16 +4,19 @@
       Ride
     </div>  
 
-    You are riding bike #<%= @bike.identifier %>. 
-    Ride started at <%= @ride.start_time%> from <%= Station.find(id = @ride.start_station_id).name %>.
+    You are riding bike <%= @bike.id %>. 
+    Ride started at <%= @ride.start_time%> from <%= Station.find(@ride.start_station_id).name %>.
     <br/> TESTS: <br/>
-    Ride bike = <%= @ride.bike_id%><br/>
-    Bike's current user = <%= User.find(id = @bike.current_user_id).username %><br/>
-    Bike's current station = <%=@bike.current_station_id%><br/>
-    ACTUAL bike's current station = <%=Bike.find(id = @bike.id).current_station_id%><br/>
-    Start station ID =<%=@ride.start_station_id%><br/>
-    Start station bikes = <%= Station.find(id= @ride.start_station_id).docked_bikes %>
+    Ride bike = <%= Bike.find(@ride.bike_id).identifier %><br/>
+    Bike's current user = <%= User.find(@bike.current_user_id).username %><br/>
+    Bike's current station = <%=@bike.current_station%><br/>
+    ACTUAL bike's current station = <%=Bike.find(@bike.id).current_station%><br/>
+    Start station Identifier = <%=Station.find(@ride.start_station_id).identifier %><br/>
+    Start station # bikes = <%= Station.find(@ride.start_station_id).docked_bikes.count %>
     <br/>
-    <input type="submit" class="button" value="End Ride" onclick="window.location = 'pricing_and_payment/ride'"> <!--change redirect-->
+    
+   <p> REMEMBER TO ADD IDENTIFIER TO RIDE</p>
+    <%= link_to 'End Ride', edit_ride_path(@ride.id) %> 
+
 	</div>
 </div>

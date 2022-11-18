@@ -9,16 +9,17 @@
   <form>
   <select name = "station">
   <% @stations.each do |station|%>
-    <option><%=station.address%></option>
+    <option><%=station.name%></option>
   <%end%>
   </select>
   <br/>
-  <input type="submit" value="select station">
+  <input type="submit" value="select station"> <!--is there a way to send the identifier as param instead of name?-->
   </form>
-
+  
   <% if params[:station] or params[:bike]%>
   <br/>
-  Bikes at <%=@chosenStation.address %>:
+  <p>...</p>
+  Bikes at <%=@chosenStation.name %>: <%= @theseBikes.count %> <br/>
     <form>
   <select name = "bike">
   <% @theseBikes.each do |bike|%>
@@ -32,7 +33,7 @@
   <%if params[:bike]%>
     Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.address%>
     <br/>
-    <%= link_to 'Start Ride', ride_path(@chosenBike)%>
+    <%= link_to 'Start Ride', ride_path(@chosenBike.identifier)%>
   <%end%>
   <% end%>
 <%#= form_with method: :get do |form|%>

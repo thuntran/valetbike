@@ -7,7 +7,7 @@ class PricingAndPaymentController < ApplicationController
     @bikes = Bike.all.order(identifier: :asc)
 
     if params[:station]
-      @chosenStation = Station.find_by(address: params[:station])
+      @chosenStation = Station.find_by(name: params[:station])
       @theseBikes = @chosenStation.docked_bikes
     end
 

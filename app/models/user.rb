@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :authentication_keys => [:email] #gives reg error when email not present
   validates :email, uniqueness: true
+
+  has_many :rides, class_name: :Ride, foreign_key: :bike_id
+  
 end
