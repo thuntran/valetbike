@@ -15,8 +15,8 @@
 
   <body>
   
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <p class="notice" id="flash-1"><%= notice %></p>
+  <p class="alert" id="flash-2"><%= alert %></p>
     <div id="site-container" class="flexbox vertical stretch flex-1">
       <div class="flexbox vertical center">
       <nav style="width:100%; z-index: 2;">
@@ -74,6 +74,24 @@
         $.fn.toggleMenu();
       });
       });
+    </script>
+    
+    <script>
+      
+    setTimeout(() => {
+      let flash_1 = document.getElementById('flash-1');
+    
+      let flash_2 = document.getElementById('flash-2');
+      
+      flash_1.style.display = 'none';
+
+      flash_2.style.display = 'none';
+    
+      flash_1.style.visibility = 'hidden';
+    
+      flash_2.style.visibility = 'hidden';
+
+    }, 1000); 
     </script>
   </body>
 </html>
