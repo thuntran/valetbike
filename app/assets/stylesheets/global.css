@@ -112,33 +112,38 @@ nav .menu{
   border-width: thin;
 }
 
-    /* section {
-      position: relative;
-      width: 50%;
-      border: 1px solid;
-    }  */
+/* section {
+  position: relative;
+  width: 50%;
+  border: 1px solid;
+}  */
 
-    .stations-map {
-      float: right;
-    }
+.stations-map {
+  float: right;
+}
 
-    /* .stations-map-title {
-      float: right;
-    } */
-    .stations-list {
-      width: 40%;
-    }
+/* .stations-map-title {
+  float: right;
+} */
+.stations-list {
+  width: 40%;
+}
 
-    #map {
-      height: 400px;
-      width: 700px;
-    }
-    /* TODO: onclick should apply to the entire div/box, not just the text 
-   * This is for experiment only.
-  */
-  .actions {
-    background-color: yellow;
-    width: 60px;
-    text-align: center;
-    border: solid;
-  }
+#map {
+  height: 400px;
+  width: 700px;
+}
+/* TODO: onclick should apply to the entire div/box, not just the text 
+* This is for experiment only.
+*/
+button.actions {
+  background-color: yellow;
+  /* width: 300px; */
+  width: fit-content;
+  text-align: center;
+  border: solid;
+}
+
+button.user-info {
+  background-color: gray;
+}
