@@ -9,12 +9,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet" type="text/css">
-    <link href="/favicon.ico" rel="icon" type="image/x-icon">
-    <title>ValetBike</title>
+    <link href="../../assets/favicon.ico" rel="icon" type="image/x-icon">
+    <title>ValetBike <%= ' - ' + yield(:title) if content_for?(:title) %></title>
   </head>
 
   <body>
-  
   <p class="notice" id="flash-1"><%= notice %></p>
   <p class="alert" id="flash-2"><%= alert %></p>
     <div id="site-container" class="flexbox vertical stretch flex-1">
