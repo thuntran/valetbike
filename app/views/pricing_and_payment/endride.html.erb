@@ -1,9 +1,9 @@
 <div class="page-section flexbox vertical stretch">
   <div class="section-inner flexbox vertical stretch">
     <div class="section-title">
-      Help us
+      End Ride
     </div>
-    
+    <p> Select the station to which you are returning bike <%= (Bike.find(@ride.bike_id)).identifier %>. </p>
         <form>
     <select name = "station">
         <% @stations.each do |station|%>
@@ -16,12 +16,11 @@
         <p>...</p>
 
     <% if params[:station] %>
-        You have finished your ride on bike: <%= (Bike.find(@ride.bike_id)).identifier %>. 
+        You have finished your ride on bike: <%= (Bike.find(@ride.bike_id)).identifier %>. <br/>
+        The bike's current station is now <%=Station.find(Bike.find(@ride.bike_id).current_station.id).name%><br/>
         Ride started at <%= @ride.start_time %> from <%= Station.find(@ride.start_station_id).name %>.<br/>
         Ride finished at <%= @ride.end_time %> at <%= Station.find(@ride.end_station_id).name %>.<br/>
-        User = <%= User.find(@ride.user_id).username %><br/>
-
-        Bike's current station = <%=Station.find(Bike.find(@ride.bike_id).current_station.id).name%><br/>
+        We hope you enjoyed your ValetBike ride, <%= User.find(@ride.user_id).username %>.
         <br/>
     <% end %>
 	</div>

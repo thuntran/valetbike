@@ -1,21 +1,17 @@
 <div class="page-section flexbox vertical stretch">
   <div class="section-inner flexbox vertical stretch">
     <div class="section-title">
-      Ride
+      Your Ride
     </div>  
-
-    You are riding bike <%= @bike.id %>. 
+    Enjoy your ride, <%= User.find(@bike.current_user_id).username %>!<br/>
+    You are riding bike <%= Bike.find(@ride.bike_id).identifier %>. 
     Ride started at <%= @ride.start_time%> from <%= Station.find(@ride.start_station_id).name %>.
     <br/> TESTS: <br/>
-    Ride bike = <%= Bike.find(@ride.bike_id).identifier %><br/>
-    Bike's current user = <%= User.find(@bike.current_user_id).username %><br/>
-    Bike's current station = <%=@bike.current_station%><br/>
-    ACTUAL bike's current station = <%=Bike.find(@bike.id).current_station%><br/>
-    Start station Identifier = <%=Station.find(@ride.start_station_id).identifier %><br/>
-    Start station # bikes = <%= Station.find(@ride.start_station_id).docked_bikes.count %>
+    Bike's current station (should be null & display nothing) = <%= Bike.find(@ride.bike_id).current_station %> <br/>
+    There are now <%= Station.find(@ride.start_station_id).docked_bikes.count %> bikes at <%= Station.find(@ride.start_station_id).name %>.
     <br/>
     
-   <p> REMEMBER TO ADD IDENTIFIER TO RIDE</p>
+   <!-- REMEMBER TO ADD IDENTIFIER TO RIDE-->
     <%= link_to 'End Ride', edit_ride_path(@ride.id) %> 
 
 	</div>
