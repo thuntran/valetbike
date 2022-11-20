@@ -3,7 +3,10 @@
     <div class="section-title">
       Pricing and Payment
     </div>  
-
+    <p>Welcome! The information about our pricing/payment options will go here later.</p>
+    <p>For example one 30 minute ride costs $XX.XX. 
+    But right now we don't have payment options set up, so all rides are free! Let's go!</p>
+    <p>To get started, select a station to start your ride from: </p>
 
 
   <form>
@@ -19,7 +22,8 @@
   <% if params[:station] or params[:bike]%>
   <br/>
   <p>...</p>
-  Bikes at <%=@chosenStation.name %>: <%= @theseBikes.count %> <br/>
+  There are <%= @theseBikes.count %> bikes at <%=@chosenStation.name %>.<br/>
+  Select a bike to check out for your ride: <br/>
     <form>
   <select name = "bike">
   <% @theseBikes.each do |bike|%>
@@ -31,7 +35,7 @@
   </form>
   <br/>
   <%if params[:bike]%>
-    Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.address%>
+    Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>)
     <br/>
     <%= link_to 'Start Ride', ride_path(@chosenBike.identifier)%>
   <%end%>
