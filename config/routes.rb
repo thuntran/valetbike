@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get 'about/index'
   get 'pricing_and_payment/index'
 
+  resources :rides
+  #get '/ride/:id'  => "pricing_and_payment#ride"
+  #get '/ride/:id', to: 'pricing_and_payment#ride', as: 'bike'
+
   
 
   devise_scope :user do
