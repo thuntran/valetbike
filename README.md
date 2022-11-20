@@ -8,7 +8,7 @@ Annie Karitonze\
 Asher Uman\
 Thu Tran\
 Sarah Branch\
-Manar Alnazer\
+Manar Alnazer
 
 ## Environment Configuration
 
