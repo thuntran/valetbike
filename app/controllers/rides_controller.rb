@@ -29,7 +29,7 @@ class RidesController < ApplicationController
       @bike = Bike.find(@ride.bike_id)
       @stations = Station.all.order(identifier: :asc)
 
-      if params[:station]
+      if params[:station] && !@ride.end_station_id
         @chosenStation = Station.find_by(name: params[:station])
         @ride.update_attribute(:end_station_id, @chosenStation.id)
         @ride.update_attribute(:end_time, DateTime.now)

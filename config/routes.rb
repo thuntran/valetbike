@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'account/index'
  
+  get 'account/login_prompt'
   
   
   get "homepage/index" => "homepage#index"

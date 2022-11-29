@@ -6,6 +6,10 @@ class PricingAndPaymentController < ApplicationController
     @stations = Station.all.order(identifier: :asc)
     @bikes = Bike.all.order(identifier: :asc)
 
+    if !user_signed_in?
+      redirect_to '/account/login_prompt'
+    end
+
     if params[:station]
       @chosenStation = Station.find_by(name: params[:station])
       @theseBikes = @chosenStation.docked_bikes

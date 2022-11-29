@@ -3,17 +3,6 @@
     <div class="section-title">
       End Ride
     </div>
-    <p> Select the station to which you are returning bike <%= (Bike.find(@ride.bike_id)).identifier %>. </p>
-        <form>
-    <select name = "station">
-        <% @stations.each do |station|%>
-        <option><%=station.name%></option>
-        <%end%>
-    </select>
-        <br/>
-    <input type="submit" value="select station">
-        </form>
-        <p>...</p>
 
     <% if params[:station] %>
         You have finished your ride on bike: <%= (Bike.find(@ride.bike_id)).identifier %>. <br/>
@@ -22,6 +11,21 @@
         Ride finished at <%= @ride.end_time %> at <%= Station.find(@ride.end_station_id).name %>.<br/>
         We hope you enjoyed your ValetBike ride, <%= User.find(@ride.user_id).username %>.
         <br/>
+
+    <% else %> 
+        <p> Select the station to which you are returning bike <%= (Bike.find(@ride.bike_id)).identifier %>. </p>
+            <form>
+        <select name = "station">
+            <% @stations.each do |station|%>
+            <option><%=station.name%></option>
+            <%end%>
+        </select>
+            <br/>
+        <input type="submit" value="select station">
+            </form>
+            <p>...</p>
+
+
     <% end %>
 	</div>
 </div>
