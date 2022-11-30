@@ -5,13 +5,15 @@
     </div>
     <p> Select the station to which you are returning bike <%= (Bike.find(@ride.bike_id)).identifier %>. </p>
         <form>
-    <select name = "station">
-        <% @stations.each do |station|%>
-        <option><%=station.name%></option>
-        <%end%>
-    </select>
-        <br/>
-    <input type="submit" value="select station">
+            <select name="station">
+                <% @stations.each do |station|%>
+                <option><%=station.name%></option>
+                <%end%>
+            </select>
+            <br/>
+            <%# Is there a better way to do the spacing? %>
+            <button type="submit" class="select-button">Select station</button>
+            <%# <input type="submit" value="Select station"> %>
         </form>
         <p>...</p>
 

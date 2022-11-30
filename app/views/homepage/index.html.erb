@@ -1,29 +1,3 @@
-<head>
-  <style>
-    .basic-instructions {
-      background-color: #0f589d;
-      color: white;
-      height: 400px;
-    }
-
-    .bike-fun {
-      position: relative;
-      background-color: #9d0f7a;
-      color: white;
-      width: 50%;
-      height: 400px;
-    }
-
-    .news {
-      background-color: gray;
-      color: white;
-      float: right;
-      width: 50%;
-      height: 400px;
-    }
-  </style>
-</head>
-
 <div class="page-section flexbox vertical stretch">
   <div class="section-inner flexbox vertical stretch">
     <div class="section-title">
@@ -32,36 +6,13 @@
       </div> 
     </div>
    
-
-    <div class="basic-instructions flexbox vertical center">
-      <h2>Basic Instructions</h2>
-    </div> 
-
-    <section>
-      <div class="news">
-        <h2>News</h2>
-      </div> 
-
-      <div class="bike-fun">
-        <h2>Bike Fun</h2>
-      </div> 
-
-      
-    </section>
-
-
-    <div class="flexbox vertical stretch">
-
-      <% if user_signed_in? %>
-        Signed in as <%= current_user.username %>
-        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-      
-      <% else %>
-      <div class="empty">
-        Not signed in <br>
-        <%= link_to 'Sign in', '/users/sign_in' %>
-      </div>
-      <% end %>
+    <h1 style="margin: auto">Basic Instructions</h1>
+    <div class="basic-instructions">
+      <div class="basic-instruction-step">Step 1</div>
+      <div class="basic-instruction-step">Step 2</div>
+      <div class="basic-instruction-step">Step 3</div>
+      <div class="basic-instruction-step">Step 4</div>
     </div>
+
 	</div>
 </div>

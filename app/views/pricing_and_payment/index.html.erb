@@ -11,13 +11,14 @@
 
 
   <form>
-  <select name = "station">
-  <% @stations.each do |station|%>
-    <option><%=station.name%></option>
-  <%end%>
-  </select>
-  <br/>
-  <input type="submit" value="select station"> <!--is there a way to send the identifier as param instead of name?-->
+    <select name = "station">
+    <% @stations.each do |station|%>
+      <option><%=station.name%></option>
+    <%end%>
+    </select>
+    <br/>
+    <button type="submit" class="select-button">Select station</button>
+    <%# <input type="submit" value="Select station"> <!--is there a way to send the identifier as param instead of name?--> %>
   </form>
   
   <% if params[:station] or params[:bike]%>
@@ -26,19 +27,22 @@
   There are <%= @theseBikes.count %> bikes at <%=@chosenStation.name %>.<br/>
   Select a bike to check out for your ride: <br/>
     <form>
-  <select name = "bike">
-  <% @theseBikes.each do |bike|%>
-    <option><%=bike.identifier%></option>
-  <%end%>
-  </select>
-  <br/>
-  <input type="submit" value="select bike">
+      <select name = "bike">
+      <% @theseBikes.each do |bike|%>
+        <option><%=bike.identifier%></option>
+      <%end%>
+      </select>
+      <br/>
+      <button type="submit" class="select-button">Select bike</button>
+      <%# <input type="submit" value="Select bike"> %>
   </form>
   <br/>
   <%if params[:bike]%>
     Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>)
     <br/>
-    <%= link_to 'Start Ride', ride_path(@chosenBike.identifier)%>
+    <button class="select-button">
+      <%= link_to 'Start ride', ride_path(@chosenBike.identifier)%>
+    </button>
   <%end%>
   <% end%>
 <%#= form_with method: :get do |form|%>
