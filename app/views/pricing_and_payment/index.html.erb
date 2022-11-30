@@ -1,54 +1,10 @@
-<head><% content_for(:title, "Pricing and Payment") %></head>
+<head>
+<% content_for(:title, "Pricing and Payment") %>
+</head>
 <div class="page-section flexbox vertical stretch">
   <div class="section-inner flexbox vertical stretch">
     <div class="section-title">
-      Pricing and Payment
+      Pricing and Payment New Edition :)
     </div>  
-    <p>Welcome! The information about our pricing/payment options will go here later.</p>
-    <p>For example one 30 minute ride costs $XX.XX. 
-    But right now we don't have payment options set up, so all rides are free! Let's go!</p>
-    <p>To get started, select a station to start your ride from: </p>
-
-  <form>
-  <select name = "station">
-  <% @stations.each do |station|%>
-    <option><%=station.name%></option>
-  <%end%>
-  </select>
-  <br/>
-  <input type="submit" value="select station"> <!--is there a way to send the identifier as param instead of name?-->
-  </form>
-  
-  <% if params[:station] or params[:bike]%>
-  <br/>
-  <p>...</p>
-  There are <%= @theseBikes.count %> bikes at <%=@chosenStation.name %>.<br/>
-  Select a bike to check out for your ride: <br/>
-    <form>
-  <select name = "bike">
-  <% @theseBikes.each do |bike|%>
-    <option><%=bike.identifier%></option>
-  <%end%>
-  </select>
-  <br/>
-  <input type="submit" value="select bike">
-  </form>
-  <br/>
-  <%if params[:bike]%>
-    Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>)
-    <br/>
-    <%= link_to 'Start Ride', ride_path(@chosenBike.identifier)%>
-  <%end%>
-  <% end%>
-<%#= form_with method: :get do |form|%>
- 
-  <%#= form.select :station, @stations %>
-  <%#=@stations%>
-  <!-- having an input tag with submit type and then have backend in the controller to process the input
-  params in ruby to filter through list 
-  
-  -->
-
-<%#end%>
 	</div>
 </div>
