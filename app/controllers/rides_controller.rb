@@ -1,9 +1,24 @@
 class RidesController < ApplicationController
-  
-  #before_action :update
 
-    def index
+  def index
+    @stations = Station.all.order(identifier: :asc)
+    @bikes = Bike.all.order(identifier: :asc)
+
+    if !user_signed_in?
+      redirect_to '/account/login_prompt'
     end
+
+    if params[:station]
+      @chosenStation = Station.find_by(name: params[:station])
+      @theseBikes = @chosenStation.docked_bikes
+    end
+
+    if params[:bike]
+      @chosenBike = Bike.find_by(identifier: params[:bike])
+      @chosenStation = @chosenBike.current_station
+      @theseBikes = @chosenStation.docked_bikes
+    end
+  end
 
     def update
       @bike = Bike.find_by(identifier: params[:id])
@@ -29,7 +44,7 @@ class RidesController < ApplicationController
       @bike = Bike.find(@ride.bike_id)
       @stations = Station.all.order(identifier: :asc)
 
-      if params[:station]
+      if params[:station] && !@ride.end_station_id
         @chosenStation = Station.find_by(name: params[:station])
         @ride.update_attribute(:end_station_id, @chosenStation.id)
         @ride.update_attribute(:end_time, DateTime.now)
@@ -37,12 +52,12 @@ class RidesController < ApplicationController
         @bike.update_attribute(:current_station, @chosenStation)
         @bike.update_attribute(:current_user_id, nil)
       end
-      render 'pricing_and_payment/endride'
+      render 'endride'
     end
 
 
     def show
         update 
-        render 'pricing_and_payment/ride'
+        render 'ride'
     end
   end
