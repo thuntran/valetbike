@@ -6,5 +6,94 @@
     <div class="section-title">
       Help
     </div>  
+
+    <div style="margin: auto">Frequently Asked Questions (FAQs)</div>
+    <button type="button" class="question-panel">Question 1</button>
+      <div class="answer">
+        <p>
+          Answer 1. 
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 2</button>
+      <div class="answer">
+        <p>
+          Answer 2. 
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 3</button>
+      <div class="answer">
+        <p>
+          Answer 3. 
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 4</button>
+      <div class="answer">
+        <p>
+          Answer 4. 
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 5</button>
+      <div class="answer">
+        <p>
+          Answer 5.
+        </p>
+      </div>
+    
+    <button type="button" class="question-panel">Question 6</button>
+      <div class="answer">
+        <p>
+          Answer 6.
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 7</button>
+      <div class="answer">
+        <p>
+          Answer 7. 
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 8</button>
+      <div class="answer">
+        <p>
+          Answer 8. 
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 9</button>
+      <div class="answer">
+        <p>
+          Answer 9. 
+        </p>
+      </div>
+
+    <button type="button" class="question-panel">Question 10</button>
+      <div class="answer">
+        <p>
+          Answer 10.
+        </p>
+      </div>
+
 	</div>
 </div>
+
+<script>
+  var coll = document.getElementsByClassName("question-panel");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</script>

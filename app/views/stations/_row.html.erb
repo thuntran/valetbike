@@ -4,14 +4,15 @@
   <%= "Number of docks: " %> <%= station.dock_count %><br>
   
   <!-- <%= "Bikes: " %> <%= station.docked_bike_ids %><br> -->
- 
-
+  
   <ul>
   <% @bikes.each do |bike| %>
     <% if bike.current_station == station %>
       <li><%= "Bike ID: " %> <%=bike.identifier%></li>
       <li><%= "Bike battery %: " %> <%=bike.battery_percentage%></li>
-      <%end%>
     <%end%>
+  <%end%>
   </ul>
+
+  
 </div>

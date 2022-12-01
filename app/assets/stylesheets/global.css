@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   z-index: 1;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -62,6 +63,11 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+
+nav ul li a:hover {
+  color: #000000;
+}
+
 nav .menu{
   display:none;
   background-color:white;
@@ -69,6 +75,7 @@ nav .menu{
   width:300px; float:right;
   margin-top:60px;
 }
+
 .user-info {
   display: flex;
 }
@@ -81,6 +88,7 @@ nav .menu{
   color: white;
   overflow: hidden;
 }
+
 .sub-menu-link p {
   width: 100%;
   color: black;
@@ -99,6 +107,7 @@ nav .menu{
 .sub-menu-link:hover p {
   font-weight: 600;
 }
+
 #subMenu {
   display:none; 
   background-color:white; 
@@ -127,23 +136,144 @@ nav .menu{
 } */
 .stations-list {
   width: 40%;
+  height: 600px;
+  overflow: auto;
 }
 
 #map {
   height: 400px;
   width: 700px;
 }
-/* TODO: onclick should apply to the entire div/box, not just the text 
-* This is for experiment only.
-*/
+
 button.actions {
-  background-color: yellow;
-  /* width: 300px; */
-  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  color: white;
+  background-color: #61a961;
+  border: none;
+  padding: 6px;
   text-align: center;
-  border: solid;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+button.actions:hover {     
+  display: block;
+  margin: 0 auto;
+  color: white;
+  background-color: gray;
+  border: none;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;  
 }
 
 button.user-info {
   background-color: gray;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.question-panel {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .question-panel:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.answer {
+  padding: 0 18px;
+  background-color: #f1f1f1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.question-panel:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.basic-instructions {
+  margin: 20px auto;
+  height: 700px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.basic-instruction-step {
+  position: relative;
+  background-color: #61a961;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  text-align: center;
+  font-size: 40px;
+}
+
+.basic-instruction-step:hover {
+  background-color: gray;
+}
+
+.basic-instruction-text {
+  font-size: 25px;
+  text-align: center;
+}
+
+.basic-instruction-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* margin: auto; */
+}
+
+.select-button {
+  display: block;
+  color: white;
+  background-color: #61a961;
+  border: none;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+.select-button:hover {
+  display: block;
+  color: white;
+  background-color: gray;
+  border: none;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
 }
