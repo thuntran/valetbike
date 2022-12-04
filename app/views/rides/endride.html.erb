@@ -12,6 +12,10 @@
         We hope you enjoyed your ValetBike ride, <%= User.find(@ride.user_id).username %>.
         <br/>
 
+    <button class="select-button">
+      <%= link_to 'Rent another bike', '../../rides/index' %>
+    </button>
+
     <% else %> 
         <p> Select the station to which you are returning bike <%= (Bike.find(@ride.bike_id)).identifier %>. </p>
             <form>
@@ -25,8 +29,6 @@
                 <button type="submit" class="select-button">Select station</button>
                 <%# <input type="submit" value="Select station"> %>
             </form>
-            <p>...</p>
-
 
     <% end %>
 	</div>

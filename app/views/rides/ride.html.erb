@@ -6,9 +6,7 @@
     Enjoy your ride, <%= User.find(@bike.current_user_id).username %>!<br/>
     You are riding bike <%= Bike.find(@ride.bike_id).identifier %>. 
     Ride started at <%= @ride.start_time%> from <%= Station.find(@ride.start_station_id).name %>.
-    <br/> TESTS: <br/>
-    Bike's current station (should be null & display nothing) = <%= Bike.find(@ride.bike_id).current_station %> <br/>
-    There are now <%= Station.find(@ride.start_station_id).docked_bikes.count %> bikes at <%= Station.find(@ride.start_station_id).name %>.
+
     <br/>
     
    <!-- REMEMBER TO ADD IDENTIFIER TO RIDE-->

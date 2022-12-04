@@ -13,14 +13,26 @@
         <b>Email address:</b> <%= current_user.email %><br/>
         [Add later: change password]</br>
         <b>Balance:</b> $<%= "%0.2f"% [current_user.balance] %><br/>
+
         <b>Ride History:</b>
 
         </div>  
           <% if @userRides.present? %>
+
             <% @userRides.each do |ride| %>
               <div class="record-row <%= cycle "odd", "even", name: "row-cycler" %> flexbox vertical stretch">
-                <b>From:</b> <%= Station.find(ride.start_station_id).name %> at <%= ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> <br> 
-                <b>To:</b> <%= Station.find(ride.end_station_id).name %> at <%= ride.end_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %><br> 
+                <b>From:</b> <%= Station.find(ride.start_station_id).name %> at <%= ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> <br>
+                <%if @currentlyRiding && ride == @mostRecentRide %>
+                  <b>You're currently on this ride!</b><br/>
+
+                  <button class="select-button">
+                    <%= link_to 'End Ride', edit_ride_path(ride.id) %> 
+                  </button>
+
+
+                <%else%>
+                  <b>To:</b> <%= Station.find(ride.end_station_id).name %> at <%= ride.end_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %><br> 
+                <%end%>
                 <b>Bike:</b> <%= Bike.find(ride.bike_id).identifier %><br> 
               </div>
             <% end %>
