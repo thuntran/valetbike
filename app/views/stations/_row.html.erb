@@ -1,18 +1,59 @@
 <div class="record-row <%= cycle "odd", "even", name: "row-cycler" %> flexbox vertical stretch">
-  <%= station.identifier %>: <%= station.name %> (<%= station.address %>)<br> 
-  <%= "Number of docked bikes: " %> <%= station.docked_bike_count %><br>
-  <%= "Number of docks: " %> <%= station.dock_count %><br>
+  <b><%= station.name %> (<%= station.address %>)</b>
+  <%= "Number of docked bikes: " %> <%= station.docked_bikes.count %><br>
+  <%= "Number of available docks: " %> <%= station.dock_count - station.docked_bikes.count %><br>
   
-  <!-- <%= "Bikes: " %> <%= station.docked_bike_ids %><br> -->
-  
-  <ul>
-  <% @bikes.each do |bike| %>
-    <% if bike.current_station == station %>
-      <li><%= "Bike ID: " %> <%=bike.identifier%></li>
-      <li><%= "Bike battery %: " %> <%=bike.battery_percentage%></li>
-    <%end%>
-  <%end%>
-  </ul>
 
-  
+  <div class="bikes-dropdown">
+    <button onclick="buttonClick(this)" class="bikes-dropbtn">Show bikes</button>
+    <div class="bikes-dropdown-content">
+      <% @bikes.each do |bike| %>
+        <% if bike.current_station == station %>
+          <a href="#"><%= "Bike ID: " %> <%=bike.identifier%> <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %></a>
+        <%end%>
+      <%end%>
+    </div>
+  </div>
 </div>
+
+<script>
+
+function createIds() {
+  var counter = 1;
+  var buttons = document.querySelectorAll(".bikes-dropbtn");
+  var dropdowns = document.querySelectorAll(".bikes-dropdown-content")
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].setAttribute("id","bikes-dropbtn-" + counter);
+    dropdowns[i].setAttribute("id","bikes-dropdown-" + counter);
+    counter++;
+  }
+} 
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function buttonClick(clickedButton) {
+  createIds();
+  // var buttons = document.querySelectorAll(".bikes-dropbtn");
+  // var dropdowns = document.querySelectorAll(".bikes-dropdown-content")
+  // console.log(buttons);
+  // console.log(dropdowns);
+  // console.log(clickedButton.id); // id of the button being clicked on
+  var suffix = clickedButton.id.slice(-1);
+  // console.log(suffix);
+  document.getElementById("bikes-dropdown-" + suffix).classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.bikes-dropbtn')) {
+    var dropdowns = document.getElementsByClassName("bikes-dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
