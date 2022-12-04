@@ -152,7 +152,7 @@ button.actions {
   color: white;
   background-color: #61a961;
   border: none;
-  padding: 6px;
+  padding: 5px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -165,7 +165,7 @@ button.actions:hover {
   color: white;
   background-color: gray;
   border: none;
-  padding: 6px;
+  padding: 5px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -327,3 +327,18 @@ button.user-info {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/*** Log in / Sign up elements ***/
+
+.field-title {
+  margin-left: 41px;
+}
+
+.field-textbox {
+  text-align: center;
+}
+
+.user-page-title {
+  font-weight: bold;
+  font-size: 18px;
+}
