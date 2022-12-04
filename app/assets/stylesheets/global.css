@@ -132,17 +132,17 @@ nav .menu{
   /* height: 400px; */
 }
 
-/* .stations-map-title {
-  float: right;
-} */
 .stations-list {
   width: 40%;
+}
+
+.stations-list-scrollable {
   height: 600px;
   overflow: auto;
 }
 
 #map {
-  height: 575px;
+  height: 600px;
   width: 700px;
 }
 
@@ -176,6 +176,8 @@ button.user-info {
   background-color: gray;
 }
 
+/* Collapsible */
+
 /* Style the button that is used to open and close the collapsible content */
 .question-panel {
   background-color: #eee;
@@ -202,7 +204,6 @@ button.user-info {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-
 .question-panel:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;

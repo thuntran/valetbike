@@ -1,18 +1,14 @@
 <div class="record-row <%= cycle "odd", "even", name: "row-cycler" %> flexbox vertical stretch">
-  <%= station.identifier %>: <%= station.name %> (<%= station.address %>)<br> 
-  <%= "Number of docked bikes: " %> <%= station.docked_bike_count %><br>
-  <%= "Number of docks: " %> <%= station.dock_count %><br>
-  
-  <!-- <%= "Bikes: " %> <%= station.docked_bike_ids %><br> -->
+  <%= station.name %> (<%= station.address %>)<br> 
+  <%= "Number of docked bikes: " %> <%= station.docked_bikes.count %><br>
+  <%= "Number of available docks: " %> <%= station.dock_count - station.docked_bikes.count %><br>
   
   <ul>
   <% @bikes.each do |bike| %>
     <% if bike.current_station == station %>
-      <li><%= "Bike ID: " %> <%=bike.identifier%></li>
-      <li><%= "Bike battery %: " %> <%=bike.battery_percentage%></li>
+      <li class="bike"><%= "Bike ID: " %> <%=bike.identifier%> <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %></li>
     <%end%>
   <%end%>
-  </ul>
-
-  
+  <ul>
 </div>
+
