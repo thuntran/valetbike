@@ -279,3 +279,51 @@ button.user-info {
   font-size: 16px;
   border-radius: 12px;
 }
+
+/* Dropdown Button */
+.bikes-dropbtn {
+  background-color: #61a961;
+  color: white;
+  padding: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* Dropdown button on hover & focus */
+.bikes-dropbtn:hover, .bikes-dropbtn:focus {
+  background-color: gray;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.bikes-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.bikes-dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.bikes-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.bikes-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
