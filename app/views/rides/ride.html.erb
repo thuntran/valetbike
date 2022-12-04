@@ -10,6 +10,7 @@
     Bike's current station (should be null & display nothing) = <%= Bike.find(@ride.bike_id).current_station %> <br/>
     There are now <%= Station.find(@ride.start_station_id).docked_bikes.count %> bikes at <%= Station.find(@ride.start_station_id).name %>.
     <br/>
+    <br/>
     
    <!-- REMEMBER TO ADD IDENTIFIER TO RIDE-->
     <button class="select-button">

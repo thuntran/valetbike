@@ -70,13 +70,15 @@
           <div class="stations-list-title">
             Station List
           </div>  
-          <% if @stations.present? %>
-            <%= render(partial: "stations/row", collection: @stations, as: :station) %>
-          <% else %>
-          <div class="empty">
-            No stations found.
-          </div>
-          <% end %>
+          <div class="stations-list-scrollable">
+            <% if @stations.present? %>
+              <%= render(partial: "stations/row", collection: @stations, as: :station) %>
+            <% else %>
+            <div class="empty">
+              No stations found.
+            </div>
+            <% end %>
+          <div>
         </div>
       </section>
     </div>

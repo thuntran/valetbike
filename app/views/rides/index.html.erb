@@ -16,6 +16,7 @@
       <%end%>
     </select>
     <br/>
+    <br/>
     <button type="submit" class="select-button">Select station</button>
     <%# <input type="submit" value="Select station"> <!--is there a way to send the identifier as param instead of name?--> %>
   </form>
@@ -32,12 +33,14 @@
       <%end%>
     </select>
     <br/>
+    <br/>
     <button type="submit" class="select-button">Select bike</button>
     <%# <input type="submit" value="Select bike"> %>
   </form>
   <br/>
   <%if params[:bike]%>
     Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>)
+    <br/>
     <br/>
     <button class="select-button">
       <%= link_to 'Start ride', ride_path(@chosenBike.identifier)%>
