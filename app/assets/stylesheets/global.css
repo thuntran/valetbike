@@ -279,6 +279,8 @@ button.user-info {
   font-size: 16px;
   border-radius: 12px;
 }
+
+
 /* Creating the flipcards for the about page */
 .flip-card {
   background-color: transparent;
@@ -418,4 +420,10 @@ button.user-info {
 .user-page-title {
   font-weight: bold;
   font-size: 18px;
+}
+
+.user-rides-scrollable {
+  width: 50%;
+  height: 400px;
+  overflow: auto;
 }

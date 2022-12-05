@@ -11,8 +11,8 @@
         Ride finished at <%= @ride.end_time %> at <%= Station.find(@ride.end_station_id).name %>.<br/>
         We hope you enjoyed your ValetBike ride, <%= User.find(@ride.user_id).username %>.
         <br/>
-
-    <button class="select-button">
+    <br/>
+    <button class="select-button" style="width: 145px;">
       <%= link_to 'Rent another bike', '../../rides/index' %>
     </button>
 
@@ -26,9 +26,7 @@
                 </select>
                 <br/>
                 <br/>
-                <%# Is there a better way to do the spacing? %>
                 <button type="submit" class="select-button">Select station</button>
-                <%# <input type="submit" value="Select station"> %>
             </form>
 
     <% end %>
