@@ -280,6 +280,85 @@ button.user-info {
   border-radius: 12px;
 }
 
+
+/* Creating the flipcards for the about page */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; 
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #61a961;
+  color: white; 
+}
+
+.flip-card-back {
+  /*background-color: #61a961;*/
+  background-color: #a3daa3;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-space1 {
+  margin: 30px 30px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-row: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+} /* puts cards into two rows */
+
+.card-space2 {
+  margin: 30px 50px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-row: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+} /* need to add a div with this class to get rows slightly off centered */
+
+.card-space3 {
+  margin: 30px 30px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px 300px;
+  grid-row: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+} /* For straight line/row */
+
+.circle-image {
+  border-radius: 50%; 
+  margin: auto;
+}
+
 /* Dropdown Button */
 .bikes-dropbtn {
   background-color: #61a961;
@@ -341,4 +420,10 @@ button.user-info {
 .user-page-title {
   font-weight: bold;
   font-size: 18px;
+}
+
+.user-rides-scrollable {
+  width: 50%;
+  height: 400px;
+  overflow: auto;
 }

@@ -6,6 +6,15 @@ class RidesController < ApplicationController
 
     if !user_signed_in?
       redirect_to '/account/login_prompt'
+
+    else
+      @userRides = Ride.where(user_id: current_user.id).order(start_time: :desc)
+      @mostRecentRide = @userRides.first
+
+      if !@mostRecentRide.end_time
+        @chosenBike = Bike.find_by(id: @mostRecentRide.bike_id)
+        redirect_to action: "update", id: @chosenBike.identifier
+      end
     end
 
     if params[:station]
@@ -35,7 +44,8 @@ class RidesController < ApplicationController
         @bike.update_attribute(:current_station, nil)
         @bike.update_attribute(:current_user_id, current_user.id)
       else
-        @ride = Ride.find_by(bike_id: @bike.id, user_id: current_user.id)
+        #@ride = Ride.find_by(bike_id: @bike.id, user_id: current_user.id)
+        @ride = Ride.where(user_id: current_user.id).order(start_time: :desc).first
       end
     end
 
