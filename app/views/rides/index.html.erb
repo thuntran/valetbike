@@ -42,7 +42,7 @@
     Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>)
     <br/>
     <br/>
-    <button class="select-button">
+    <button class="select-button" style="width: 83px;">
       <%= link_to 'Start ride', ride_path(@chosenBike.identifier)%>
     </button>
   <%end%>

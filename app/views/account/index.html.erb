@@ -17,34 +17,37 @@
         <b>Ride History:</b>
 
         </div>  
-          <% if @userRides.present? %>
+        <div class="user-rides-scrollable">
+            <% if @userRides.present? %>
 
-            <% @userRides.each do |ride| %>
-              <div class="record-row <%= cycle "odd", "even", name: "row-cycler" %> flexbox vertical stretch">
-                <b>From:</b> <%= Station.find(ride.start_station_id).name %> at <%= ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> <br>
-                <%if @currentlyRiding && ride == @mostRecentRide %>
-                  <b>You're currently on this ride!</b><br/>
+              <% @userRides.each do |ride| %>
+                <div class="record-row <%= cycle "odd", "even", name: "row-cycler" %> flexbox vertical stretch">
+                  <b>From:</b> <%= Station.find(ride.start_station_id).name %> at <%= ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> <br>
+                  <%if @currentlyRiding && ride == @mostRecentRide %>
+                    <b>You're currently on this ride!</b><br/>
 
-                  <button class="select-button">
-                    <%= link_to 'End Ride', edit_ride_path(ride.id) %> 
-                  </button>
+                    <button class="select-button">
+                      <%= link_to 'End ride', edit_ride_path(ride.id) %> 
+                    </button>
 
 
-                <%else%>
-                  <b>To:</b> <%= Station.find(ride.end_station_id).name %> at <%= ride.end_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %><br> 
-                <%end%>
-                <b>Bike:</b> <%= Bike.find(ride.bike_id).identifier %><br> 
-              </div>
+                  <%else%>
+                    <b>To:</b> <%= Station.find(ride.end_station_id).name %> at <%= ride.end_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %><br> 
+                  <%end%>
+                  <b>Bike:</b> <%= Bike.find(ride.bike_id).identifier %><br> 
+                </div>
+              <% end %>
+            <% else %>
+            <div class="empty">
+              No rides found.
+            </div>
             <% end %>
-          <% else %>
-          <div class="empty">
-            No rides found.
-          </div>
-          <% end %>
+        </div>
+    
 
 
         <br/>
-        <button class="select-button">
+        <button class="select-button" style="width: 75px;">
           <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
         </button>
       
