@@ -9,11 +9,13 @@ class RidesController < ApplicationController
 
     else
       @userRides = Ride.where(user_id: current_user.id).order(start_time: :desc)
-      @mostRecentRide = @userRides.first
+      if @userRides.present?
+        @mostRecentRide = @userRides.first
 
-      if !@mostRecentRide.end_time
-        @chosenBike = Bike.find_by(id: @mostRecentRide.bike_id)
-        redirect_to action: "update", id: @chosenBike.identifier
+        if !@mostRecentRide.end_time
+          @chosenBike = Bike.find_by(id: @mostRecentRide.bike_id)
+          redirect_to action: "update", id: @chosenBike.identifier
+        end
       end
     end
 

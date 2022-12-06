@@ -317,10 +317,19 @@ button.user-info {
   color: white; 
 }
 
+.card-image {
+  width:250px;
+  height:250px;
+  padding:20px 0px 0px 0px;
+  margin:auto;
+}
+
 .flip-card-back {
   /*background-color: #61a961;*/
   background-color: #a3daa3;
-  color: white;
+  color: black;
+  
+  padding:20px;
   transform: rotateY(180deg);
 }
 
@@ -427,3 +436,4 @@ button.user-info {
   height: 400px;
   overflow: auto;
 }
+
