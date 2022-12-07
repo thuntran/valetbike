@@ -11,10 +11,9 @@
       <% if user_signed_in? %>
         <b> Signed in as: </b> <%= current_user.username %><br/>
         <b>Email address:</b> <%= current_user.email %><br/>
-        [Add later: change password]</br>
         <b>Balance:</b> $<%= "%0.2f"% [current_user.balance] %><br/>
 
-        <b>Ride History:</b>
+        <b>Ride history:</b>
 
         </div>  
         <div class="user-rides-scrollable">
