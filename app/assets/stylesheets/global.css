@@ -437,3 +437,15 @@ button.user-info {
   overflow: auto;
 }
 
+.homepage-blurb {
+  padding-bottom:30px; 
+  margin-left: 100px; 
+  margin-right: 100px; 
+  text-align: justify; 
+  font-size: 20px
+}
+
+.stations-title {
+  font-size: 20px;
+}
+
