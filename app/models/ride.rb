@@ -4,7 +4,7 @@ class Ride < ApplicationRecord
                             :user_id,
                             :bike_id,
                             :start_time
-    #validates_uniqueness_of :identifier
+                            :identifier
 
     belongs_to :user, class_name: :User, foreign_key: :user_id
     belongs_to :bike, class_name: :Bike, foreign_key: :bike_id

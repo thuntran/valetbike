@@ -41,6 +41,7 @@ class RidesController < ApplicationController
         @ride.update_attribute(:bike_id, @bike.id)
         @ride.update_attribute(:user_id, current_user.id)
         @ride.update_attribute(:start_time, DateTime.now)
+        @ride.update_attribute(:identifier, Time.now.to_i)
 
 
         @bike.update_attribute(:current_station, nil)
@@ -52,7 +53,7 @@ class RidesController < ApplicationController
     end
 
     def edit
-      @ride = Ride.find(params[:id])
+      @ride = Ride.where(user_id: current_user.id).find_by(identifier: params[:id])
       @bike = Bike.find(@ride.bike_id)
       @stations = Station.all.order(identifier: :asc)
 
