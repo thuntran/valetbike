@@ -12,7 +12,7 @@
   <form>
     <select name = "station">
       <% @stations.each do |station|%>
-        <option><%=station.name%></option>
+        <option <% if params && station == @chosenStation %> selected <%end%>><%=station.name%></option>
       <%end%>
     </select>
     <br/>
