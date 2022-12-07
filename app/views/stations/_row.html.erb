@@ -9,8 +9,8 @@
     <div class="bikes-dropdown-content">
       <% @bikes.each do |bike| %>
         <% if bike.current_station == station %>
-          <a href="#" style="float: left;padding:5%;"><%= "Bike ID: " %> <%=bike.identifier%> <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %></a>
-          <button style="float: right;padding:1%;">
+          <a href="#" style="float: left;padding:6%;"><%= "Bike ID: " %> <%=bike.identifier%> <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %></a>
+          <button style="float: right;padding:2%;">
             <%= link_to('Rent this bike', 
               {controller: "rides", action:"index", bike: bike.identifier}, 
               {:style=>'color:white; background-color: #61a961; border-radius: 12px', :class => "css_class"}
