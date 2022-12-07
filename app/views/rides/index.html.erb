@@ -29,7 +29,7 @@
   <form>
     <select name = "bike">
       <% @theseBikes.each do |bike|%>
-        <option><%=bike.identifier%></option>
+        <option <% if params[:bike] && bike == @chosenBike %> selected <%end%>><%=bike.identifier%></option>
       <%end%>
     </select>
     <br/>
