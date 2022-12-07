@@ -9,7 +9,7 @@
     <div class="bikes-dropdown-content">
       <% @bikes.each do |bike| %>
         <% if bike.current_station == station %>
-          <a href="#"><%= "Bike ID: " %> <%=bike.identifier%> <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %></a>
+          <a href="#"><%= "Bike ID: " %> <%=bike.identifier%> <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %> <%= link_to('Rent this bike', {controller: "rides", action:"index", bike: bike.identifier}) %></a>
         <%end%>
       <%end%>
     </div>
