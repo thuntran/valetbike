@@ -164,7 +164,7 @@ button.actions:hover {
 }
 
 button.user-info {
-  background-color: gray;
+  background-color: #506d46ea;
 }
 
 /* Collapsible */
@@ -232,7 +232,7 @@ button.user-info {
 }
 
 .basic-instruction-step:hover {
-  background-color: gray;
+  background-color: #538a53ea;
 }
 
 .basic-instruction-text {
@@ -242,9 +242,10 @@ button.user-info {
 
 .basic-instruction-image {
   position: absolute;
-  left: 0;
   bottom: 0;
-  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 .select-button {
@@ -447,13 +448,32 @@ button.user-info {
   height: 400px;
   overflow: auto;
 }
+.bad-puns {
+  display: grid;
+  grid-template-columns: 100px 200px auto;
+}
+.bubble {
+  width: 300px;
+	background: #538a53ea;
+	margin: 0 auto;
+	border-radius: 20px;
+	font-size: 200px;
+	text-align: center;
+}
+.bubble h2 {
+  font-family: cursive;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .homepage-blurb {
   padding-bottom:30px; 
-  margin-left: 100px; 
-  margin-right: 100px; 
-  text-align: justify; 
-  font-size: 20px
+  font-size: 20px;
+  margin-left: 200px;
 }
 
 .stations-title {
