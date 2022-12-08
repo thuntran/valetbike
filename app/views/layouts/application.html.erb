@@ -17,6 +17,8 @@
 
   <p class="notice" id="flash-1"><%= notice %></p>
   <p class="alert" id="flash-2"><%= alert %></p>
+
+
     <div id="site-container" class="flexbox vertical stretch flex-1">
       <div class="flexbox vertical center">
       <nav style="width:100%; z-index: 2;">
@@ -53,24 +55,22 @@
             </div>
       </div>
     </nav>
+    <script>
+      function dismissFlash(element){
+            document.getElementById(element).style.display = 'none';
+          }
+      </script>
+    
+    <% flash.each do |type, msg| %>
+    <div id="myFlash" class="notice">
+      <%= msg %>
+      <button onClick="dismissFlash('myFlash');" class="flash-close">&times;</button>
+      <%flash.discard%>
+    </div>
+    <% end %>
         <%= yield %>
 
-
-            <script>
-            function dismissFlash(element){
-                  document.getElementById(element).style.display = 'none';
-                }
-            </script>
-
-        <% flash.each do |type, msg| %>
-          <div id="myFlash" class="notice">
-            <%= msg %>
-            <button onClick="dismissFlash('myFlash');" class="flash-close">&times;</button>
-            <%flash.discard%>
-          </div>
-        <% end %>
-        
-      </div>
+        <!--this is where the flashes og were -->
 
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

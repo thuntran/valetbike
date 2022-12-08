@@ -491,7 +491,7 @@ button.user-info {
 }
 
 .notice {
-  margin: 2%;
+  margin-top: 5%;
   background-color: rgb(214, 226, 217);
   color: #61a961;
   padding: 20px 40px 20px 40px;/*2% 5% 2% 5%;*/
