@@ -4,9 +4,8 @@
     <div class="section-title">
       Rent
     </div>  
-    <p>Welcome! The information about our pricing/payment options will go here later.</p>
-    <p>For example one 30 minute ride costs $XX.XX. 
-    But right now we don't have payment options set up, so all rides are free! Let's go!</p>
+    <p>Welcome! Start a ride by checking out a bike from this page.</p>
+    <p>One 30 minute ride costs $2.50</p>
     <p>To get started, select a station to start your ride from: </p>
 
   <form>
@@ -42,19 +41,23 @@
     Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>)
     <br/>
     <br/>
+
+    <% if current_user.balance >= 2.50 %>
+
     <button class="select-button" style="width: 83px;">
       <%= link_to 'Start ride', ride_path(@chosenBike.identifier)%>
     </button>
+
+    <% else %>
+      <% flash[:alert] = "Not enough funds to rent this bike!" %>
+    <%end%>
+    
   <%end%>
   <% end%>
 <%#= form_with method: :get do |form|%>
  
   <%#= form.select :station, @stations %>
   <%#=@stations%>
-  <!-- having an input tag with submit type and then have backend in the controller to process the input
-  params in ruby to filter through list 
-  
-  -->
 
 <%#end%>
 	</div>

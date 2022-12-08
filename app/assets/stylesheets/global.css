@@ -263,6 +263,34 @@ button.user-info {
   background-color: gray;
 }
 
+/* payment option boxes */
+
+.payment-section {
+  margin: 20px auto;
+  height: 80px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.payment-option {
+  position: relative;
+  background-color: gray;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.payment-option:hover {
+  background-color: #61a961;
+}
+
+/*payment options end*/
 
 /* Creating the flipcards for the about page */
 .flip-card {
