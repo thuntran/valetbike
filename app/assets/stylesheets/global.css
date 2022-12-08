@@ -284,12 +284,13 @@ button.user-info {
 
 .payment-section {
   margin: 20px auto;
-  height: 700px;
-  background-color: blueviolet;
+  height: 80px;
+  background-color: white;
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
   grid-row: auto auto;
   grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .payment-option {
@@ -297,9 +298,13 @@ button.user-info {
   background-color: gray;
   padding: 20px;
   border-radius: 12px;
-  /*color: white;*/
+  color: white;
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
+}
+
+.payment-option:hover {
+  background-color: #61a961;
 }
 
 /*payment options end*/
