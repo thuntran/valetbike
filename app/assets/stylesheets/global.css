@@ -489,3 +489,19 @@ button.user-info {
 .link-btn:hover {     
   background-color: #5e5050;
 }
+
+.notice {
+  margin: 2%;
+  background-color: rgb(214, 226, 217);
+  color: #61a961;
+  padding: 20px 40px 20px 40px;/*2% 5% 2% 5%;*/
+  border-radius: 25px;
+}
+
+.flash-close {
+  color: gray;
+  float: right;
+  margin-top: -15px;/*-15%;*/
+  margin-right: -25px;/*-33%;*/
+  padding: 1%;
+}
