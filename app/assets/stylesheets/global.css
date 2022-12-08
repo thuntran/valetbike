@@ -164,7 +164,7 @@ button.actions:hover {
 }
 
 button.user-info {
-  background-color: gray;
+  background-color: #506d46ea;
 }
 
 /* Collapsible */
@@ -220,7 +220,7 @@ button.user-info {
 
 .basic-instruction-step {
   position: relative;
-  background-color: #61a981;
+  background-color: #61a961;
   padding: 20px;
   border-radius: 12px;
   color: white;
@@ -232,7 +232,7 @@ button.user-info {
 }
 
 .basic-instruction-step:hover {
-  background-color: #60a392;
+  background-color: #538a53ea;
 }
 
 .basic-instruction-text {
@@ -426,7 +426,7 @@ button.user-info {
 }
 .bubble {
   width: 300px;
-	background: #61a997;
+	background: #538a53ea;
 	margin: 0 auto;
 	border-radius: 20px;
 	font-size: 200px;
@@ -436,6 +436,10 @@ button.user-info {
   font-family: cursive;
   font-size: 20px;
   text-align: center;
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .homepage-blurb {
