@@ -160,16 +160,7 @@ button.actions {
 }
 
 button.actions:hover {     
-  display: block;
-  margin: 0 auto;
-  color: white;
   background-color: gray;
-  border: none;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 12px;  
 }
 
 button.user-info {
@@ -269,15 +260,7 @@ button.user-info {
 }
 
 .select-button:hover {
-  display: block;
-  color: white;
   background-color: gray;
-  border: none;
-  padding: 6px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 12px;
 }
 
 /* payment option boxes */
@@ -477,3 +460,32 @@ button.user-info {
   font-size: 20px;
 }
 
+/* button.actions {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  background-color: #61a961;
+  border: none;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+} */
+
+.link-btn {     
+  display: block;
+  margin: 0 auto;
+  color: white;
+  background-color: gray;
+  border: none;
+  padding: 5px 12px 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;  
+}
+
+.link-btn:hover {     
+  background-color: #5e5050;
+}
