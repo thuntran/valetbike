@@ -1,16 +1,15 @@
 <div class="page-section flexbox vertical stretch">
   <div class="section-inner flexbox vertical stretch">
     <div class="section-title">
-      Your Ride
+      You're on a ride!
     </div>  
     Enjoy your ride, <%= User.find(@bike.current_user_id).username %>!<br/>
     You are riding bike <%= Bike.find(@ride.bike_id).identifier %>. 
-    Ride started at <%= @ride.start_time%> from <%= Station.find(@ride.start_station_id).name %>.
+    Ride started at <%= @ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> from <%= Station.find(@ride.start_station_id).name %>.
 
     <br/>
     <br/>
     
-   <!-- REMEMBER TO ADD IDENTIFIER TO RIDE-->
     <button class="select-button" style="width: 75px;">
       <%= link_to 'End ride', edit_ride_path(@ride.identifier) %> 
     </button>

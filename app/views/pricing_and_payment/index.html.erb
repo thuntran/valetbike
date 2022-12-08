@@ -1,10 +1,53 @@
 <head>
 <% content_for(:title, "Pricing and Payment") %>
 </head>
+<p id="notice"><%= flash[:notice] %></p>
 <div class="page-section flexbox vertical stretch">
   <div class="section-inner flexbox vertical stretch">
     <div class="section-title">
-      Pricing and Payment New Edition :)
+      Pricing and Payment
     </div>  
+
+    <p> Want to get started with ValetBike? Add funds to your account here!</p><br/>
+    <p> A 30 minute ride costs $2.50. Purchase* one of the options below to increase your account balance.</p>
+    <p> Remember, you can't start a ride if you don't have enough funds in your ValetBike account.
+        You can check your account balance on the <a href="../account/index" style="color:#61a961">Account</a> page. </p>
+    
+
+    <div id="payment-section flexbox vertical stretch">
+      <div id="payment-option">
+      <button>
+        <%= link_to('Add $5', 
+        {controller: "pricing_and_payment", action:"add_funds", funds: 5.0}) %>
+      </button>
+      </div>
+
+      <div id="payment-option">
+      hello
+      <button >
+      <%= link_to('Add $10', 
+      {controller: "pricing_and_payment", action:"add_funds", funds: 10.0}) %>
+      </button>
+      </div>
+
+      <div id="payment-option">
+      <button>
+      <%= link_to('Add $25', 
+      {controller: "pricing_and_payment", action:"add_funds", funds: 25.0}) %>
+      </button>
+      </div>
+
+      <div id="payment-option">
+      <button>
+      <%= link_to('Add $50', 
+      {controller: "pricing_and_payment", action:"add_funds", funds: 50.0}) %>
+      </button>
+      </div>
+    </div>
+    
+
+
+    <p>*Currently, this page is a simulation only, so no actual purchase is needed to add funds.</p>
+
 	</div>
 </div>

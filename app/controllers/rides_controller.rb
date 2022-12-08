@@ -46,6 +46,9 @@ class RidesController < ApplicationController
 
         @bike.update_attribute(:current_station, nil)
         @bike.update_attribute(:current_user_id, current_user.id)
+        # take money out of account to pay for ride
+        @newBalance = current_user.balance - 2.50
+        current_user.update_attribute(:balance, @newBalance)
       else
         #@ride = Ride.find_by(bike_id: @bike.id, user_id: current_user.id)
         @ride = Ride.where(user_id: current_user.id).order(start_time: :desc).first

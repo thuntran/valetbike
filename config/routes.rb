@@ -6,18 +6,18 @@ Rails.application.routes.draw do
   
   get "homepage/index" => "homepage#index"
   root to: "homepage#index"
+
   devise_for :users
+
   get 'stations/index'
   get 'help/index'
   get 'about/index'
   get 'pricing_and_payment/index'
+  get 'pricing_and_payment/add_funds' => 'pricing_and_payment#add_funds'
 
   get 'rides/index'
   resources :rides
-  #get '/ride/:id'  => "pricing_and_payment#ride"
-  #get '/ride/:id', to: 'pricing_and_payment#ride', as: 'bike'
 
-  
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
