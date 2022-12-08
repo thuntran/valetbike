@@ -449,7 +449,7 @@ button.user-info {
   display: block;
   margin: 0 auto;
   color: white;
-  background-color: rgb(163, 29, 29);
+  background-color: gray;
   border: none;
   padding: 5px 12px 5px 12px;
   text-align: center;
@@ -459,5 +459,5 @@ button.user-info {
 }
 
 .link-btn:hover {     
-  background-color: gray;
+  background-color: #5e5050;
 }
