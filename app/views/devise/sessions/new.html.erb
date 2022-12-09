@@ -6,7 +6,7 @@
   <div class="flexbox vertical center">
 
     <h2 class="user-page-title">Log in</h2><br/>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
       
       <div class="field">
         <%= f.label :email %><br />
@@ -24,6 +24,8 @@
           <%= f.label :remember_me %>
         </div>
       <% end %>
+
+      <% devise_error_messages! %>
 
       <br>
       <button class="actions">

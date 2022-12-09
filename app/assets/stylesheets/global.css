@@ -484,10 +484,15 @@ button.user-info {
 /*** Login ***/
 
 .field-title {
-  margin-left: 41px;
+  /*margin-left: 41px;*/
 }
 
 .field-textbox {
+  text-align: center;
+}
+
+.field {
+  padding: 10px;
   text-align: center;
 }
 
@@ -531,6 +536,14 @@ button.user-info {
   margin-top: 5%;
   background-color: rgb(214, 226, 217);
   color: #61a961;
+  padding: 20px 40px 20px 40px;/*2% 5% 2% 5%;*/
+  border-radius: 25px;
+}
+
+.alert {
+  margin-top: 5%;
+  background-color: rgb(231, 219, 206);
+  color: #a96161;
   padding: 20px 40px 20px 40px;/*2% 5% 2% 5%;*/
   border-radius: 25px;
 }

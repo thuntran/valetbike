@@ -58,11 +58,19 @@
       </script>
     
     <% flash.each do |type, msg| %>
-      <div id="myFlash" class="notice">
-        <%= msg %>
-        <button onClick="dismissFlash('myFlash');" class="flash-close">&times;</button>
-        <%flash.discard%>
-      </div>
+      <% if type == "notice" %>
+        <div id="myFlashNotice" class="notice">
+          <%= msg %>
+          <button onClick="dismissFlash('myFlashNotice');" class="flash-close">&times;</button>
+          <%flash.discard%>
+        </div>
+      <% else %> 
+        <div id="myFlashAlert" class="alert">
+          <%= msg %>
+          <button onClick="dismissFlash('myFlashAlert');" class="flash-close">&times;</button>
+          <%flash.discard%>
+        </div>
+      <% end %>
     <% end %>
     <%= yield %>
 
