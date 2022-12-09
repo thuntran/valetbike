@@ -484,11 +484,7 @@ button.user-info {
 /*** Login ***/
 
 .field-title {
-  /*margin-left: 41px;*/
-}
-
-.field-textbox {
-  text-align: center;
+  float: left;
 }
 
 .field {
