@@ -2,32 +2,33 @@
 <div class="page-section flexbox vertical stretch">
   <div class="flexbox vertical center">
     <h2 class="user-page-title">Sign up</h2><br/>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+
 
       <div class="field">
-        <h2 class="field-title"><%= f.label :email %></h2>
-        <div class="field-textbox"><%= f.email_field :email, autofocus: true, autocomplete: "email" %></div>
+        <%= f.label :email, :class => "field-title" %><br>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
       <div class="field">
-        <h2 class="field-title"><%= f.label :username %></h2>
-        <div class="field-textbox"><%= f.text_field :username, autocomplete: "username" %></div>
+        <%= f.label :username, :class => "field-title" %><br>
+        <%= f.text_field :username, autocomplete: "username" %>
       </div>
 
       <div class="field">
-      <h2 style="margin-left: 41px">
-        <%= f.label :password %>
+        <%= f.label :password, :class => "field-title" %><br>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <em style="float: left">(<%= @minimum_password_length %> characters minimum)</em><br>
         <% end %>
-      </h2>
-        <div class="field-textbox"><%= f.password_field :password, autocomplete: "new-password" %></div>
+        <%= f.password_field :password, autocomplete: "new-password" %>
       </div>
 
       <div class="field">
-        <h2 class="field-title"><%= f.label :password_confirmation %></h2>
-        <div class="field-textbox"><%= f.password_field :password_confirmation, autocomplete: "new-password" %></div>
+        <%= f.label :password_confirmation, :class => "field-title" %><br>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
       
       <br>

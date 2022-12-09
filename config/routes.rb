@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "homepage/index" => "homepage#index"
   root to: "homepage#index"
 
+  get '/users', to: redirect('/users/sign_up')
   devise_for :users
 
   get 'stations/index'
