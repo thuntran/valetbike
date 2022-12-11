@@ -9,105 +9,11 @@
 
     </br></br>
     <%# The following code is from https://ralzohairi.medium.com/displaying-dynamic-elapsed-time-in-javascript-260fa0e95049 %>
-    <div class="container">
-        <p class="elapsed-time-text">00:00</p>
-        <div class="buttons-container">
-            
-        </div>
-    </div>
     </br>
     <marquee  behavior="scroll" direction="right"> 
       <img src="../../assets/cycling-bicycle.gif" style="width:100px">
     </marquee>
     
-    <script>
-    var startButton = document.getElementById("start-button");
-    var elapsedTimeText = document.getElementsByClassName("elapsed-time-text")[0];
-    
-    //Listeners
-    // none
-    
-    /** Hide the start button */
-    function hideStartButton() {
-        // Hide start button
-        startButton.style.display = "none";
-    
-        // Display stop button
-    }
-    
-    //Controller
-    
-    /** Stores the reference to the elapsed time interval*/
-    var elapsedTimeIntervalRef;
-    
-    /** Stores the start time of timer */
-    var startTime;
-    
-    /** Starts the stopwatch */
-    function startStopwatch() {
-
-        setStartTime();
-    
-        elapsedTimeIntervalRef = setInterval(() => {
-            elapsedTimeText.innerText = timeAndDateHandling.getElapsedTime(startTime); 
-    
-        }, 1000);
-        hideStartButton();
-    }
-    function setStartTime() {
-            startTime = new Date();
-    }
-    
-    function stopStopwatch() {
-        if (typeof elapsedTimeIntervalRef !== "undefined") {
-            clearInterval(elapsedTimeIntervalRef);
-            elapsedTimeIntervalRef = undefined;
-        }
-    }
-    
-   
-    var timeAndDateHandling = {
-        /** Computes the elapsed time since the moment the function is called in the format mm:ss or hh:mm:ss
-         * @param {String} startTime - start time to compute the elapsed time since
-         * @returns {String} elapsed time in mm:ss format or hh:mm:ss format if elapsed hours are 0.
-         */
-        getElapsedTime: function (startTime) {
-    
-            
-            let endTime = new Date();
-    
-            let timeDiff = endTime.getTime() - startTime.getTime();
-    
-            timeDiff = timeDiff / 1000;
-    
-            let seconds = Math.floor(timeDiff % 60); 
-    
-            let secondsAsString = seconds < 10 ? "0" + seconds : seconds + "";
-            timeDiff = Math.floor(timeDiff / 60);
-    
-            
-            let minutes = timeDiff % 60; 
-    
-            let minutesAsString = minutes < 10 ? "0" + minutes : minutes + "";
-    
-            
-            timeDiff = Math.floor(timeDiff / 60);
-            let hours = timeDiff % 24; 
-            timeDiff = Math.floor(timeDiff / 24);
-    
-            let days = timeDiff;
-    
-            let totalHours = hours + (days * 24); 
-            let totalHoursAsString = totalHours < 10 ? "0" + totalHours : totalHours + "";
-    
-            if (totalHoursAsString === "00") {
-                return minutesAsString + ":" + secondsAsString;
-            } else {
-                return totalHoursAsString + ":" + minutesAsString + ":" + secondsAsString;
-            }
-        }
-    }
-    </script>
     <br/>
     <br/>
     
