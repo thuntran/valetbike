@@ -60,14 +60,14 @@
     <% flash.each do |type, msg| %>
       <% if type == "notice" %>
         <div id="myFlashNotice" class="notice">
+        <button onClick="dismissFlash('myFlashNotice');" class="flash-close">&times;</button>
           <%= msg %>
-          <button onClick="dismissFlash('myFlashNotice');" class="flash-close">&times;</button>
           <%flash.discard%>
         </div>
       <% else %> 
         <div id="myFlashAlert" class="alert">
+        <button onClick="dismissFlash('myFlashAlert');" class="flash-close">&times;</button>
           <%= msg %>
-          <button onClick="dismissFlash('myFlashAlert');" class="flash-close">&times;</button>
           <%flash.discard%>
         </div>
       <% end %>
