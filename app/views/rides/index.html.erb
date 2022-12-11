@@ -44,7 +44,7 @@
 
     <% if current_user.balance >= 2.50 %>
 
-    <button class="select-button" style="width: 83px;">
+    <button class="select-button"  style="width: 83px;" id="start-button">
       <%= link_to 'Start ride', ride_path(@chosenBike.identifier)%>
     </button>
 

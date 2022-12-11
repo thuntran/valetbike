@@ -42,6 +42,67 @@
         <img class="basic-instruction-image" src="../../assets/lock.png" alt="Image 4">
       </div>
     </div>
+    <div class ="funsies"> 
+      <div class ="btn-folder">
+        <button id="nature-btn">Explore Nature</button>
+        <button id="town-btn">Explore Town</button>
+
+      </div>
+      <div id="nature">
+        <div class = "gems" style="background-color: #a3daa3;">
+          <img src="../../assets/manhan-rail-trail.jpg">
+          <p> Manhan Rail: </br> <%= ManhanRail! %> </br>
+          <p>
+          <a style="color: #538a53ea;" href = "https://manhanrailtrail.org/directions/">Learn More</a>
+        </div>
+        <div class = "gems" style="background-color: #a3daa3;">
+          <img src="../../assets/hitchcock.png">
+          <p> South Amherst: </br> <%= SouthAmherst! %> <p>
+          <a style="color: #538a53ea;" href = "https://www.hitchcockcenter.org/">Learn More</a>
+        </div>
+      </div>
+
+      <div id="town" style="display:none;">
+        <div class = "gems" style="background-color: #71a971ea;">
+        <img src="../../assets/mill.jpg">
+        <p> Mill District: </br><%= MillDistrict! %>
+        <p>
+        <a style="color: #2f582fea;" href = "https://themilldistrictna.com/">Learn More</a>
+       </div>
+
+       <div class = "gems" style="background-color: #71a971ea;">
+        <img src="../../assets/academy-of-music.jpg">
+        <p> Northampton Downtown: </br> <%= NorthamptonDowntown! %>
+        <p>
+        <a style="color: #2f582fea;" href = "https://www.aomtheatre.com/">Learn More</a>
+
+       </div>
+      </div>
+    </div>
 
 	</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+
+    $(document).ready(function(){
+  
+      $.fn.blogShowTown = function(){
+      town.style.display = 'block';
+      nature.style.display = 'none';
+
+      $.fn.blogShowNature = function(){
+          nature.style.display = 'block';
+          town.style.display = 'none';
+      }
+  }
+  
+
+    $('#nature-btn').click(function(){
+      $.fn.blogShowNature();
+    });
+    $('#town-btn').click(function(){
+      $.fn.blogShowTown();
+    });
+    });
+  </script>
 </div>
