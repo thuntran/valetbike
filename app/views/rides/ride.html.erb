@@ -7,6 +7,13 @@
     You are riding bike <%= Bike.find(@ride.bike_id).identifier %>. 
     Ride started at <%= @ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> from <%= Station.find(@ride.start_station_id).name %>.
 
+    </br></br>
+    <%# The following code is from https://ralzohairi.medium.com/displaying-dynamic-elapsed-time-in-javascript-260fa0e95049 %>
+    </br>
+    <marquee  behavior="scroll" direction="right"> 
+      <img src="../../assets/cycling-bicycle.gif" style="width:100px">
+    </marquee>
+    
     <br/>
     <br/>
     
