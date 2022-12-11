@@ -327,7 +327,7 @@ button.user-info {
 
 .bad-puns {
   display: grid;
-  grid-template-columns: 100px 200px auto;
+  grid-template-columns: 200px 200px auto;
   align-items: center;
 }
 
@@ -440,7 +440,7 @@ button.user-info {
   
   padding:20px;
   transform: rotateY(180deg);
-  overflow: scroll;
+  overflow: auto;
 }
 
 .card-space1 {
@@ -559,4 +559,17 @@ button.user-info {
   border-width:5px; 
   border-style:solid;
 /*width: 400px;*/
+}
+
+aside {
+  padding-left: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 3000px;
+  margin-left: 800px;
+  float: left;
+}
+
+.frame {
+  display: block;
+  float: left;
 }
