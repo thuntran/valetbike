@@ -440,6 +440,7 @@ button.user-info {
   
   padding:20px;
   transform: rotateY(180deg);
+  overflow: scroll;
 }
 
 .card-space1 {
@@ -550,4 +551,12 @@ button.user-info {
   margin-top: -15px;/*-15%;*/
   margin-right: -25px;/*-33%;*/
   padding: 1%;
+}
+
+.form {
+  /*background-color: pink;*/
+  border:#a3daa3; 
+  border-width:5px; 
+  border-style:solid;
+/*width: 400px;*/
 }

@@ -2,7 +2,7 @@
 <% content_for(:title, "Log in") %>
 </head>
 
-<div class="page-section flexbox vertical stretch">
+<div class="page-section2 flexbox vertical stretch form">
   <div class="flexbox vertical center">
 
     <h2 class="user-page-title">Log in</h2><br/>
@@ -35,8 +35,13 @@
       <br>
     <% end %>
   </div>
-
+  <%= render "devise/shared/links" %>
 </div>
 
 
-<%= render "devise/shared/links" %>
+<%#= render "devise/shared/links" %>
+
+
+<div>
+  <img style ="margin-bottom:1000px; margin-left: 800px; width: 500px; height: 500px;"src="../../assets/welcomeJelly.png">
+</div>
