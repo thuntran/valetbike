@@ -9,7 +9,7 @@
     <div class="bikes-dropdown-content">
       <% @bikes.each do |bike| %>
         <% if bike.current_station == station %>
-          <a href="#" style="float: left;padding:6%;"><%= "Bike ID: " %> <%=bike.identifier%> </br> Run Time: <%= runTime!(bike.battery_percentage) %> Minutes <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %> </a>
+          <a href="#" style="float: left;padding:6%;"><%= "Bike ID: " %> <%=bike.identifier%> </br> Runtime: <%= runTime!(bike.battery_percentage) %> minutes <%= "(battery: " %> <%=bike.battery_percentage%> <%= "%)" %> </a>
           <button style="float: right;padding:2px; margin-top: 15px;"> 
             <%= link_to('Rent this bike', 
               {controller: "rides", action:"index", bike: bike.identifier}, 
@@ -40,13 +40,7 @@ function createIds() {
 toggle between hiding and showing the dropdown content */
 function buttonClick(clickedButton) {
   createIds();
-  // var buttons = document.querySelectorAll(".bikes-dropbtn");
-  // var dropdowns = document.querySelectorAll(".bikes-dropdown-content")
-  // console.log(buttons);
-  // console.log(dropdowns);
-  // console.log(clickedButton.id); // id of the button being clicked on
   var suffix = clickedButton.id.slice(-1);
-  // console.log(suffix);
   document.getElementById("bikes-dropdown-" + suffix).classList.toggle("show");
 }
 

@@ -25,8 +25,8 @@
         <img class="basic-instruction-image" style="width:70%" src="../../assets/join.png" alt="Image 1"> <!-- favicon used as placeholder -->
       </div>
       <div class="basic-instruction-step">
-        <span>Unlock A Bike</span>
-        <p class="basic-instruction-text"> Unlock a bike by selecting the station/bike ID on the Station Map/List page. You will pay from your balance, which must be filled in advance.  
+        <span>Unlock Bike</span>
+        <p class="basic-instruction-text"> Unlock a bike by selecting the a specific station or bike ID listed on the Station Map/List page. You will pay from your balance, which must be filled in advance.  
         </p>
         <img class="basic-instruction-image" src="../../assets/unlock.png" alt="Image 2">
       </div>
@@ -36,7 +36,7 @@
         <img class="basic-instruction-image" style="width:80%" src="../../assets/ride.png" alt="Image 3">
       </div>
       <div class="basic-instruction-step">
-        <span>Lock The Bike</span>
+        <span>Lock Bike</span>
         <p class="basic-instruction-text">Once you want to end your ride, you can return the bike to any ValetBike station and dock it there. You will need to indicate what station you would like to dock your bike.
         </p>
         <img class="basic-instruction-image" src="../../assets/lock.png" alt="Image 4">
@@ -44,37 +44,37 @@
     </div>
     <div class ="funsies"> 
       <div class ="btn-folder">
-        <button id="nature-btn">Explore Nature</button>
+        <button id="nature-btn" style="font-weight: bold">Explore Nature</button>
         <button id="town-btn">Explore Town</button>
 
       </div>
       <div id="nature">
         <div class = "gems" style="background-color: #a3daa3;">
           <img src="../../assets/manhan-rail-trail.jpg">
-          <p> Manhan Rail: </br> <%= ManhanRail! %> </br>
+          <p> <b>Manhan Rail</b> </br> <%= ManhanRail! %> </br>
           <p>
-          <a style="color: #538a53ea;" href = "https://manhanrailtrail.org/directions/">Learn More</a>
+          <a class="learn-more-btn-1" href = "https://manhanrailtrail.org/directions/">Learn More</a>
         </div>
         <div class = "gems" style="background-color: #a3daa3;">
           <img src="../../assets/hitchcock.png">
-          <p> South Amherst: </br> <%= SouthAmherst! %> <p>
-          <a style="color: #538a53ea;" href = "https://www.hitchcockcenter.org/">Learn More</a>
+          <p> <b>South Amherst</b> </br> <%= SouthAmherst! %> <p>
+          <a class="learn-more-btn-1" href = "https://www.hitchcockcenter.org/">Learn More</a>
         </div>
       </div>
 
       <div id="town" style="display:none;">
         <div class = "gems" style="background-color: #71a971ea;">
         <img src="../../assets/mill.jpg">
-        <p> Mill District: </br><%= MillDistrict! %>
+        <p> <b>Mill District</b> </br><%= MillDistrict! %>
         <p>
-        <a style="color: #2f582fea;" href = "https://themilldistrictna.com/">Learn More</a>
+        <a class="learn-more-btn-2" href = "https://themilldistrictna.com/">Learn More</a>
        </div>
 
        <div class = "gems" style="background-color: #71a971ea;">
-        <img src="../../assets/academy-of-music.jpg">
-        <p> Northampton Downtown: </br> <%= NorthamptonDowntown! %>
+        <img src="../../assets/academy-of-music.jpg" style="height: 210.4px">
+        <p> <b>Northampton Downtown</b> </br> <%= NorthamptonDowntown! %>
         <p>
-        <a style="color: #2f582fea;" href = "https://www.aomtheatre.com/">Learn More</a>
+        <a class="learn-more-btn-2" href = "https://www.aomtheatre.com/">Learn More</a>
 
        </div>
       </div>
@@ -84,25 +84,20 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script>
 
-    $(document).ready(function(){
-  
-      $.fn.blogShowTown = function(){
-      town.style.display = 'block';
-      nature.style.display = 'none';
-
-      $.fn.blogShowNature = function(){
-          nature.style.display = 'block';
-          town.style.display = 'none';
+    window.onclick = function(event){
+      if (event.target.matches("#town-btn")) {
+        $("#town").css("display", "block")
+        $("#town-btn").css("font-weight", "bold")
+        $("#nature").css("display", "none")
+        $("#nature-btn").css("font-weight", "")
       }
-  }
-  
+      if (event.target.matches("#nature-btn")) {
+        $("#nature").css("display", "block")
+        $("#nature-btn").css("font-weight", "bold")
+        $("#town").css("display", "none")
+        $("#town-btn").css("font-weight", "")
+      }
+    };
 
-    $('#nature-btn').click(function(){
-      $.fn.blogShowNature();
-    });
-    $('#town-btn').click(function(){
-      $.fn.blogShowTown();
-    });
-    });
   </script>
 </div>

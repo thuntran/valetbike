@@ -4,7 +4,7 @@
       You're on a ride!
     </div>  
     Enjoy your ride, <%= User.find(@bike.current_user_id).username %>!<br/>
-    You are riding bike <%= Bike.find(@ride.bike_id).identifier %>. 
+    You are riding Bike <%= Bike.find(@ride.bike_id).identifier %>. 
     Ride started at <%= @ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> from <%= Station.find(@ride.start_station_id).name %>.
 
     </br></br>
