@@ -53,11 +53,13 @@ function buttonClick(clickedButton) {
 window.onclick = function(event) {
   if (!event.target.matches('.bikes-dropbtn')) {
     var dropdowns = document.getElementsByClassName("bikes-dropdown-content");
+    var buttons = document.querySelectorAll(".bikes-dropbtn");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
+        buttons[i].innerHTML = "Show bikes";
       }
     }
   }
