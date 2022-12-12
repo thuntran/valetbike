@@ -14,33 +14,29 @@
     
 
     <div class="payment-section flexbox vertical stretch">
-      <div class="payment-option">
-      <button>
-        <%= link_to('Add $5', 
-        {controller: "pricing_and_payment", action:"add_funds", funds: 5.0}) %>
-      </button>
-      </div>
+      <%= link_to(
+        'Add $5', 
+        {controller: "pricing_and_payment", action:"add_funds", funds: 5.0},
+        :class => "payment-option"
+      ) %>
 
-      <div class="payment-option">
-      <button >
-      <%= link_to('Add $10', 
-      {controller: "pricing_and_payment", action:"add_funds", funds: 10.0}) %>
-      </button>
-      </div>
+      <%= link_to(
+        'Add $10', 
+        {controller: "pricing_and_payment", action:"add_funds", funds: 10.0},
+        :class => "payment-option"
+      ) %>
 
-      <div class="payment-option">
-      <button>
-      <%= link_to('Add $25', 
-      {controller: "pricing_and_payment", action:"add_funds", funds: 25.0}) %>
-      </button>
-      </div>
+      <%= link_to(
+        'Add $25', 
+        {controller: "pricing_and_payment", action:"add_funds", funds: 25.0},
+        :class => "payment-option"
+      ) %>
 
-      <div class="payment-option">
-      <button>
-      <%= link_to('Add $50', 
-      {controller: "pricing_and_payment", action:"add_funds", funds: 50.0}) %>
-      </button>
-      </div>
+      <%= link_to(
+        'Add $50', 
+        {controller: "pricing_and_payment", action:"add_funds", funds: 50.0},
+        :class => "payment-option"
+      ) %>
     </div>
     
 
