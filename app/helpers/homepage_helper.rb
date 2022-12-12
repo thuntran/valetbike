@@ -62,7 +62,7 @@ module HomepageHelper
     end 
 
     def MillDistrict!
-        text = "Bike around the Mill District and explore its hidden gems! Mill District contrasting architecture between historic and modern is worth the ride. You can enjoy the landscape of Northern Amherst while biking on the Stone Arch Bridge, stopping at old local stores to try the freshest pies in town! In spirits of Western Mass spooky history, we recommend exploring the Mill Ruins Park. Let us know if you see any witches there!"
+        text = "Bike around the Mill District and explore its hidden gems! Mill District contrasting historic & modern architecture is worth the ride. You can enjoy the landscape of Northern Amherst while biking on the Stone Arch Bridge, stopping at old local stores to try the freshest pies in town! In spirits of Western Mass spooky history, we recommend exploring the Mill Ruins Park. Let us know if you see any witches there!"
     end
     def NorthamptonDowntown!
         text = "Northampton Downtown has many local artsy stores that you can shop at! You can also try the well-loved fruit tart from The Roost. After a fruitful day (no pun intended), you can relax at the Academy of Music and watch local performances or visit Smith College Museum of Art!"

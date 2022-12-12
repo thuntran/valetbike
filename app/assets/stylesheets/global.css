@@ -380,6 +380,7 @@ button.user-info {
 #town-btn {
   background-color: #71a971ea;
 }
+
 #nature-btn {
   background-color: #a3daa3;
 }
@@ -422,6 +423,10 @@ button.user-info {
 
 .learn-more-btn-1:hover, .learn-more-btn-2:hover {
   color: white;
+}
+
+.funsies-img {
+  height: 215px;
 }
 
 /*** Homepage ends ***/
