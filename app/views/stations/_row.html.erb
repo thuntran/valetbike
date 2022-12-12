@@ -3,7 +3,7 @@
   <%= "Number of docked bikes: " %> <%= station.docked_bikes.count %><br>
   <%= "Number of available docks: " %> <%= station.dock_count - station.docked_bikes.count %><br>
   
-
+  <% if station.docked_bikes.present? %>
   <div class="bikes-dropdown">
     <button onclick="buttonClick(this)" class="bikes-dropbtn">Show bikes</button>
     <div class="bikes-dropdown-content">
@@ -21,6 +21,7 @@
       <%end%>
     </div>
   </div>
+  <%end%>
 </div>
 
 <script>
