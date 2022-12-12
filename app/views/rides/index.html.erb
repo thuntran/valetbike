@@ -5,7 +5,7 @@
       Rent
     </div>  
     <p>Welcome! Start a ride by checking out a bike from this page.</p>
-    <p>One 30 minute ride costs $2.50</p>
+    <p>One 30 minute ride costs <b>$2.50</b>.</p>
     <p>To get started, select a station to start your ride from: </p>
 
   <form>
@@ -38,7 +38,7 @@
   </form>
   <br/>
   <%if params[:bike]%>
-    Selected bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>)
+    Selected Bike <%= @chosenBike.identifier %> at <%= @chosenStation.name %> (<%= @chosenStation.address%>).
     <br/>
     <br/>
 
@@ -54,11 +54,5 @@
     
   <%end%>
   <% end%>
-<%#= form_with method: :get do |form|%>
- 
-  <%#= form.select :station, @stations %>
-  <%#=@stations%>
-
-<%#end%>
 	</div>
 </div>

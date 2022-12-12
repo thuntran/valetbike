@@ -5,8 +5,8 @@
     </div>
 
     <% if params[:station] %>
-        You have finished your ride on bike: <%= (Bike.find(@ride.bike_id)).identifier %>. <br/>
-        The bike's current station is now <%=Station.find(Bike.find(@ride.bike_id).current_station.id).name%><br/>
+        You have finished your ride on Bike <%= (Bike.find(@ride.bike_id)).identifier %>. <br/>
+        The bike's current station is now <%=Station.find(Bike.find(@ride.bike_id).current_station.id).name%>.<br/>
         Ride started at <%= @ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> from <%= Station.find(@ride.start_station_id).name %>.<br/>
         Ride finished at <%= @ride.end_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> at <%= Station.find(@ride.end_station_id).name %>.<br/>
         We hope you enjoyed your ValetBike ride, <%= User.find(@ride.user_id).username %>!
@@ -17,7 +17,7 @@
     </button>
 
     <% else %> 
-        <p> Select the station to which you are returning bike <%= (Bike.find(@ride.bike_id)).identifier %>. </p>
+        <p> Select the station to which you are returning bike <%= (Bike.find(@ride.bike_id)).identifier %>: </p>
             <form>
                 <select name = "station">
                     <% @stations.each do |station|%>

@@ -55,16 +55,16 @@ module HomepageHelper
         puns.sample
     end
     def ManhanRail!
-        text = "My favorite route is Manhan Rail! I like to bike from Smith college to Eastampton and grab ice cream from Mt.Tom's Homemade Ice cream. There is a ValetBike station right next to it. I highly recommend riding there through the fall. There are two stations at the ManHan Rail (Rail Trail @ Union Street and Rail Trail @ Millside Park)!"
+        text = "Our favorite route is Manhan Rail! Bike from Smith College to Easthampton and grab some ice cream from Mt. Tom's Homemade Ice Cream. There is a ValetBike station right next to it. We highly recommend riding there through the fall. There are two stations at the Manhan Rail: Rail Trail @ Union Street and Rail Trail @ Millside Park!"
     end 
     def SouthAmherst!
-        text = "If you want your ride to be educational, you need to bike to South Amherst! You can visit the National Yiddish Book Center or, to embrace nature, the Hitchcock Center for the Environment. To get to the Hitchcock center, you could dock your ValetBike West St station and walk for 15 minutes!"
+        text = "If you want your ride to be educational, you might want to bike to South Amherst! You can visit the National Yiddish Book Center or, to embrace nature, the Hitchcock Center for the Environment. To get to the Hitchcock Center, you could dock your ValetBike at the West St. Station and walk for 15 minutes!"
     end 
 
     def MillDistrict!
         text = "Bike around the Mill District and explore hidden gems! You can enjoy the beautiful landscape of Northern Amherst while biking on the Stone Arch Bridge! Or if you are ready for a spooky time, then you should explore the Mill Ruins Park."
     end
     def NorthamptonDowntown!
-        text = "Northampton Downtown has many local artsy stores that you can shop at! You can also try my favorite fruit tart from the Roost. After a fruitful day (no pun intended), you can relax at the Academy of Music and watch local performances!"
+        text = "Northampton Downtown has many local artsy stores that you can shop at! You can also try the well-loved fruit tart from The Roost. After a fruitful day (no pun intended), you can relax at the Academy of Music and watch local performances!"
     end 
 end

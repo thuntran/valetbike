@@ -358,6 +358,72 @@ button.user-info {
   text-align: justify;
 }
 
+.funsies {
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #a3daa3;
+  
+  border-radius: 15px;
+}
+
+.funsies button{
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#town-btn {
+  background-color: #71a971ea;
+}
+#nature-btn {
+  background-color: #a3daa3;
+}
+
+.funsies img {
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  border-radius: 15px;
+}
+
+.gems {
+  display:block;
+  float: left;
+}
+.funsies p {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn-folder {
+  float: left; 
+  width: 100%; 
+  background-color: #97cd97;
+  border-radius: 15px;
+}
+
+.learn-more-btn-1 {
+  color: #538a53ea;
+}
+
+.learn-more-btn-2 {
+  color: #2f582fea;
+}
+
+.learn-more-btn-1:hover, .learn-more-btn-2:hover {
+  color: white;
+}
+
 /*** Homepage ends ***/
 
 /*** Payment option boxes ***/
@@ -493,7 +559,28 @@ button.user-info {
   text-align: center;
 }
 
-/*** Login end ***/
+.form {
+  /*background-color: pink;*/
+  border:#a3daa3; 
+  border-width:5px; 
+  border-style:solid;
+/*width: 400px;*/
+}
+
+aside {
+  padding-left: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 3000px;
+  margin-left: 800px;
+  float: left;
+}
+
+.frame {
+  display: block;
+  float: left;
+}
+
+/*** Login ends ***/
 
 /*** Account page ***/
 .user-page-title {
@@ -529,6 +616,8 @@ button.user-info {
 }
 /*** Link buttons end ***/
 
+/*** Flash alerts ***/
+
 .notice {
   margin-top: 5%;
   background-color: rgb(214, 226, 217);
@@ -553,77 +642,8 @@ button.user-info {
   padding: 1%;
 }
 
-.funsies {
-  width: 90%;
-  height: auto;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  background-color: #a3daa3;
-  
-  border-radius: 15px;
-}
+/*** Flash alerts end ***/
 
-.funsies button{
-  margin-top: 10px;
-  padding: 10px;
-  text-align: center;
-  font-size: 15px;
-}
-#town-btn {
-  background-color: #71a971ea;
-}
-#nature-btn {
-  background-color: #a3daa3;
-}
 
-.funsies img {
-  width: 300px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  float: left;
-  border-radius: 15px;
-}
-.gems {
-  display:block;
-  float: left;
-}
-.funsies p {
-  font-size: 20px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.btn-folder {
-  float: left; 
-  width: 100%; 
-  background-color: #97cd97;
-  border-radius: 15px;
-}
-
-.form {
-  /*background-color: pink;*/
-  border:#a3daa3; 
-  border-width:5px; 
-  border-style:solid;
-/*width: 400px;*/
-}
-
-aside {
-  padding-left: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 3000px;
-  margin-left: 800px;
-  float: left;
-}
-
-.frame {
-  display: block;
-  float: left;
-}
 
 
