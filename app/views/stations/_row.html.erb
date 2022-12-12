@@ -42,6 +42,11 @@ function buttonClick(clickedButton) {
   createIds();
   var suffix = clickedButton.id.slice(-1);
   document.getElementById("bikes-dropdown-" + suffix).classList.toggle("show");
+  if (document.getElementById("bikes-dropbtn-" + suffix).innerHTML == "Show bikes") {
+    document.getElementById("bikes-dropbtn-" + suffix).innerHTML = "Hide bikes";
+  } else {
+    document.getElementById("bikes-dropbtn-" + suffix).innerHTML = "Show bikes";
+  }
 }
 
 // Close the dropdown menu if the user clicks outside of it
