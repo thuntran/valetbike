@@ -1,45 +1,7 @@
 <head>
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-  <script>
-  $(document).ready(function() {
-    var map = L.map('map').setView([42.3163031, -72.6424982], 13); // centered at Smith College
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-    
-    var pulaskiMarker = L.marker([42.3173232, -72.6330437],{
-      title: "Pulaski Park"
-    }).addTo(map);
-    pulaskiMarker.bindPopup("<h1><b>Pulaski Park</b></h1><p><a href= ../../rides/index?station=Pulaski+Park%2FDowntown>Rent a bike at the Pulaski Park station!</a></p><a href='https://goo.gl/maps/DrLW1RmmBFJePwGR6' target='_blank'>View Pulaski Park address on Google Maps</a><img src= '../../assets/PulaskiPark.jpeg'/>");
-
-    var forbesLibMarker = L.marker([42.316749, -72.635711], {
-      title: "Forbes Library"
-    }).addTo(map);
-    forbesLibMarker.bindPopup("<h1><b>Forbes Library</b></h1><p><a href=../../rides/index?station=Forbes+Library>Rent a bike at the Forbes Library station!</a></p><a href='https://goo.gl/maps/WvWT6oWJWc9wqsLt5' target='_blank'>View Forbes Library address on Google Maps</a><img src= '../../assets/Forbes_Library.jpeg'/>");
-
-
-    var JMGMarker = L.marker([42.3194483, -72.6402443],{
-      title: "John M. Greene"
-    }).addTo(map);
-    JMGMarker.bindPopup("<h1><b>John M. Greene</b></h1><p><a href=../../rides/index?station=John+M+Greene+Hall%2FSmith+College>Rent a bike at the John M. Greene station!</a></p><a href='https://goo.gl/maps/9LzMWy66P5jvre8XA' target='_blank'>View John M. Greene address on Google Maps</a><img src= '../../assets/JMG.jpeg'/>");
-
-
-    var oneBridgeStreetMarker = L.marker([42.3204752, -72.6325833],{
-      title:"Main Street/Bridge Street"
-    }).addTo(map);
-    oneBridgeStreetMarker.bindPopup("<h1><b>Main Street/Bridge Street</b></h1><p><a href=../../rides/index?station=Main+Street%2FBridge+Street>Rent a bike at the Main Street/Bridge Street station!</a></p><a href='https://goo.gl/maps/9E5gRdPnPTodrmaj9' target='_blank'>View Main Street/Bridge Street address on Google Maps</a><img src= '../../assets/1BridgeStreet.jpeg'/>");
-
-    var ninetyNineMainStMarker = L.marker([42.3195189, -72.632782],{
-      title:"Main Street/Court House"
-    }).addTo(map);
-    ninetyNineMainStMarker.bindPopup("<h1><b>Main Street/Court House</b></h1><p><a href=../../rides/index?station=Main+Street%2FCourt+House>Rent a bike at the Main Street/Court House station!</a></p> <a href='https://goo.gl/maps/Wb5CZzD9pcWNzbCJ7' target='_blank'>View Main Street/Court Street address on Google Maps</a><img src= '../../assets/99MainStreet.jpeg'/>");
-  })
-  </script>
   <% content_for(:title, "Station Map/List") %>
-  
 </head>
 
 <div class="page-section flexbox vertical stretch">
@@ -55,6 +17,39 @@
             Station Map
           </div>
           <div id="map"></div>
+            <script>
+              var map = L.map('map').setView([42.3163031, -72.6424982], 13); // centered at Smith College
+              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+              }).addTo(map);
+              
+              var pulaskiMarker = L.marker([42.3173232, -72.6330437],{
+                title: "Pulaski Park"
+              }).addTo(map);
+              pulaskiMarker.bindPopup("<h1><b>Pulaski Park</b></h1><p><a href= ../../rides/index?station=Pulaski+Park%2FDowntown>Rent a bike at the Pulaski Park station!</a></p><a href='https://goo.gl/maps/DrLW1RmmBFJePwGR6' target='_blank'>View Pulaski Park address on Google Maps</a><img src= '../../assets/PulaskiPark.jpeg'/>");
+
+              var forbesLibMarker = L.marker([42.316749, -72.635711], {
+                title: "Forbes Library"
+              }).addTo(map);
+              forbesLibMarker.bindPopup("<h1><b>Forbes Library</b></h1><p><a href=../../rides/index?station=Forbes+Library>Rent a bike at the Forbes Library station!</a></p><a href='https://goo.gl/maps/WvWT6oWJWc9wqsLt5' target='_blank'>View Forbes Library address on Google Maps</a><img src= '../../assets/Forbes_Library.jpeg'/>");
+
+              var JMGMarker = L.marker([42.3194483, -72.6402443],{
+                title: "John M. Greene"
+              }).addTo(map);
+              JMGMarker.bindPopup("<h1><b>John M. Greene</b></h1><p><a href=../../rides/index?station=John+M+Greene+Hall%2FSmith+College>Rent a bike at the John M. Greene station!</a></p><a href='https://goo.gl/maps/9LzMWy66P5jvre8XA' target='_blank'>View John M. Greene address on Google Maps</a><img src= '../../assets/JMG.jpeg'/>");
+
+
+              var oneBridgeStreetMarker = L.marker([42.3204752, -72.6325833],{
+                title:"Main Street/Bridge Street"
+              }).addTo(map);
+              oneBridgeStreetMarker.bindPopup("<h1><b>Main Street/Bridge Street</b></h1><p><a href=../../rides/index?station=Main+Street%2FBridge+Street>Rent a bike at the Main Street/Bridge Street station!</a></p><a href='https://goo.gl/maps/9E5gRdPnPTodrmaj9' target='_blank'>View Main Street/Bridge Street address on Google Maps</a><img src= '../../assets/1BridgeStreet.jpeg'/>");
+
+              var ninetyNineMainStMarker = L.marker([42.3195189, -72.632782],{
+                title:"Main Street/Court House"
+              }).addTo(map);
+              ninetyNineMainStMarker.bindPopup("<h1><b>Main Street/Court House</b></h1><p><a href=../../rides/index?station=Main+Street%2FCourt+House>Rent a bike at the Main Street/Court House station!</a></p> <a href='https://goo.gl/maps/Wb5CZzD9pcWNzbCJ7' target='_blank'>View Main Street/Court Street address on Google Maps</a><img src= '../../assets/99MainStreet.jpeg'/>");
+            </script>
         </div>
         <div class="stations-list">
           <div class="stations-title">
