@@ -15,6 +15,7 @@ class RidesController < ApplicationController
         if !@mostRecentRide.end_time
           @chosenBike = Bike.find_by(id: @mostRecentRide.bike_id)
           redirect_to action: "update", id: @chosenBike.identifier
+          flash[:alert] = "You can only rent one bike at a time! Please end your current ride before starting a new one."
         end
       end
     end
