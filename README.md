@@ -2,7 +2,8 @@
 
 Smith College CSC223: Software Engineering\
 Starter App for ValetBike project\
-This app was built by Team Really Good Name (RGN):\
+
+This app was built by Team Really Good Name (RGN):
 - [Annie Karitonze](https://github.com/stardess)
 - [Asher Uman](https://github.com/ashruman)
 - [Thu Tran](https://github.com/thuntran)
