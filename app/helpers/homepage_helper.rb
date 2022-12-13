@@ -12,7 +12,6 @@ module HomepageHelper
             "I bought an exercise bike, but I got rid of it after 2 weeks. Didn't seem to be getting anywhere.",
             "My mate punched a driver for pulling into the bike lane. He's a bit of a cycle-path.",
             "I Googled how to ride a bike and the first video I saw was 'How to Ride a Bike from Scratch'. So I'm going to assume they baked a bike.", # why not
-            "Are you sure you're okay? :( okay with me dragging deez nuts across your face. ", # from my friend
             "Please follow us on social media and give us a ValetLike!", # from asher
             "Your mom.", # because i can
             "Can you handle my bike jokes? Or do you need a brake?",
@@ -46,7 +45,7 @@ module HomepageHelper
             "Green is the color of envy, so go borrow a ValetBike so people will be envious of your bike. Not me though. Since I can't ride a bike.", # why not
             "What does a biker do when he notices he's on the wrong trail? He back-pedals.",
             "What's the perfect name for a sculptor who uses bike parts for his art? Cycleangelo.",
-            "Go touch grass. But you know what else has grass. GENSHIN IMPACT. (thi is to annoy Asher)", # why not
+            "Go touch grass. But you know what else has grass. GENSHIN IMPACT. (this is to annoy Asher)", # why not
             "A barber won a bike race, I asked him how? He said he took a short cut.",
             "What name did the chemist give to the bike he built? Bike-carbonate of Soda.",
             "What do you call a bike that loves learning? A uni-cycle."
@@ -55,7 +54,7 @@ module HomepageHelper
         puns.sample
     end
     def ManhanRail!
-        text = "Our favorite route is Manhan Rail! The trial connects Northampton to Easthampton, passing through the lower valley. There are two ValetBikes stations at Manhan Rail: Rail Trail @ Union Street and Rail Trail @ Millside Park! Easthampton is home to Mt. Tom State Reservation and Mt. Tom's Homemade Ice Cream shop."
+        text = "Our favorite route is Manhan Rail! The trail connects Northampton to Easthampton, passing through the lower valley. There are two ValetBikes stations at Manhan Rail: Rail Trail @ Union Street and Rail Trail @ Millside Park! Easthampton is home to Mt. Tom State Reservation and Mt. Tom's Homemade Ice Cream shop."
     end 
     def SouthAmherst!
         text = "If you want your ride to be educational, you might want to bike to South Amherst! You can visit the National Yiddish Book Center, the Hitchcock Center for the Environment or Plumbrook Conservation Area. To get to the Hitchcock Center, you could dock your ValetBike at the West St. Station and walk for 15 minutes! South Amherst is also home to the liberal arts college Hampshire College."
@@ -65,6 +64,6 @@ module HomepageHelper
         text = "Bike around the Mill District and explore its hidden gems! Mill District contrasting architecture between historic and modern is worth the ride. You can enjoy the landscape of Northern Amherst while biking on the Stone Arch Bridge, stopping at old local stores to try the freshest pies in town! In spirits of Western Mass spooky history, we recommend exploring the Mill Ruins Park. Let us know if you see any witches there!"
     end
     def NorthamptonDowntown!
-        text = "Northampton Downtown has many local artsy stores that you can shop at! You can also try the well-loved fruit tart from The Roost. After a fruitful day (no pun intended), you can relax at the Academy of Music and watch local performances or visit Smith College Museum of Art!"
+        text = "Northampton Downtown has many local artsy stores that you can shop at! You can also try the well-loved fruit tart from The Roost. After a fruitful day (no pun intended), you can relax at the Academy of Music and watch local performances or visit the Smith College Museum of Art!"
     end 
 end
