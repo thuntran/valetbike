@@ -63,11 +63,18 @@ class RidesController < ApplicationController
 
       if params[:station] && !@ride.end_station_id
         @chosenStation = Station.find_by(name: params[:station])
+
+        if @chosenStation.docked_bikes.count >= @chosenStation.dock_count
+          flash[:alert] = "This station is full!"
+          params.delete :station
+        else
+
         @ride.update_attribute(:end_station_id, @chosenStation.id)
         @ride.update_attribute(:end_time, DateTime.now)
 
         @bike.update_attribute(:current_station, @chosenStation)
         @bike.update_attribute(:current_user_id, nil)
+        end
       end
       render 'endride'
     end
