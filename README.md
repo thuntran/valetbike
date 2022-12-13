@@ -7,7 +7,8 @@ This app was built by Team Really Good Name (RGN):\
 - [Asher Uman](https://github.com/ashruman)
 - [Thu Tran](https://github.com/thuntran)
 - [Sarah Branch](https://github.com/sbranch58)
-- [Manar Alnazer](https://github.com/Manarnz)
+- [Manar Alnazer](https://github.com/Manarnz)\
+
 App is now live on Heroku: http://valetbikergn.herokuapp.com/ 
 
 ## Setting up the dev environment:
