@@ -23,6 +23,10 @@ class RidesController < ApplicationController
     if params[:station]
       @chosenStation = Station.find_by(name: params[:station])
       @theseBikes = @chosenStation.docked_bikes
+      if !@theseBikes.present?
+        flash[:alert] = "This station is empty!"
+        params.delete :station
+      end
     end
 
     if params[:bike]
