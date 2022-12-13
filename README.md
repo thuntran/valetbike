@@ -1,9 +1,13 @@
 # ValetBike
 
-Smith College CSC 223: Software Engineering\
-ValetBike project\
-Team Really Good Name (RGN)\
-Annie Karitonze, Asher Uman, Thu Tran, Sarah Branch, Manar Alnazer
+Smith College CSC223: Software Engineering\
+Starter App for ValetBike project\
+This app was built by Team Really Good Name (RGN):\
+- [Annie Karitonze](https://github.com/stardess)
+- [Asher Uman](https://github.com/ashruman)
+- [Thu Tran](https://github.com/thuntran)
+- [Sarah Branch](https://github.com/sbranch58)
+- [Manar Alnazer](https://github.com/Manarnz)\
 App is now live on Heroku: http://valetbikergn.herokuapp.com/ 
 
 ## Setting up the dev environment:
