@@ -7,9 +7,9 @@
     You are riding Bike <%= Bike.find(@ride.bike_id).identifier %>. 
     Ride started at <%= @ride.start_time.localtime.strftime("%I:%M %p on %A %m/%d/%Y") %> from <%= Station.find(@ride.start_station_id).name %>.
 
-    </br></br>
+    <br><br>
     <%# The following code is from https://ralzohairi.medium.com/displaying-dynamic-elapsed-time-in-javascript-260fa0e95049 %>
-    </br>
+    <br>
     <marquee  behavior="scroll" direction="right"> 
       <img src="../../assets/cycling-bicycle.gif" style="width:100px">
     </marquee>
@@ -17,9 +17,7 @@
     <br/>
     <br/>
     
-    <button class="select-button" style="width: 75px;">
-      <%= link_to 'End ride', edit_ride_path(@ride.identifier) %> 
-    </button>
+      <%= link_to 'End ride', edit_ride_path(@ride.identifier), :class => "select-button", :style => 'width: 75px;' %> 
 
 	</div>
 </div>

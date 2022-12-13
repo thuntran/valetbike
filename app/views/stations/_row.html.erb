@@ -1,3 +1,9 @@
+<style type="text/css">
+  .rent-bike-btn:hover {
+    color: black!important;
+  }
+</style>
+
 <div class="record-row <%= cycle "odd", "even", name: "row-cycler" %> flexbox vertical stretch">
   <b><%= station.name %> (<%= station.address %>)</b>
   <%= "Number of docked bikes: " %> <%= station.docked_bikes.count %><br>
@@ -13,7 +19,7 @@
           <button style="float: right;padding:2px; margin-top: 15px;"> 
             <%= link_to('Rent this bike', 
               {controller: "rides", action:"index", bike: bike.identifier}, 
-              {:style=>'color:white; background-color: #61a961; border-radius: 12px', :class => "css_class"}
+              {:style=>'color:white; background-color: #61a961; border-radius: 12px', :class => "rent-bike-btn"}
             ) %>
           </button>
 
@@ -25,6 +31,8 @@
 </div>
 
 <script>
+
+$('.rent-bike-btn:hover').css("background-color", "gray");
 
 function createIds() {
   var counter = 1;
