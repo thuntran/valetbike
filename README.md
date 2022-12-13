@@ -7,17 +7,76 @@ This app was built by Team Really Good Name (RGN):\
 - [Asher Uman](https://github.com/ashruman)
 - [Thu Tran](https://github.com/thuntran)
 - [Sarah Branch](https://github.com/sbranch58)
-- [Manar Alnazer](https://github.com/Manarnz)\
+- [Manar Alnazer](https://github.com/Manarnz)
 
 App is now live on Heroku: http://valetbikergn.herokuapp.com/ 
 
-## Setting up the dev environment:
+## Environment Configuration
 
-- Run `bundle install` to install required gems (including `devise`).
-- Create databases with `rake db:create`.
-- Populate the database (by importing data from CSV files) with `rake import_data:data`.
-- Migrate the database with `rake db:migrate`.
-- To check that app runs: open http://localhost:3000/ or http://127.0.0.1:3000/ in a browser.
+As you configure your environment you should **keep a log** where you **write down all the steps you take** including **each command you type**. You will inevitably run into errors setting up your development environment and maintaining a meticulous log will allow others to help you troubleshoot. Ignore this recommendation at your own peril, but don't say you haven't been warned :]
+
+Installing Ruby on Rails is not a trivial process. It is the essential first step to developing ValetBike, and it will take you far longer than all the other steps to complete. Be sure to set aside ample time to work through the setup.
+
+### 0. Remember that versions matter
+ValetBike runs on Ruby 3.1.2 and Rails 7.0.3.1. It is essential that you configure your environment to use these precise versions of the language and framework.
+
+### 1. Install Ruby on Rails with MySQL
+
+On Mac it is strongly recommended that you use asdf to install Ruby. On Windows you should set up your environment through the Windows Subsystem for Linux (WSL). The guides below explain how to do so in detail:
+
+- [Mac Ruby on Rails Developer Environment Setup](https://github.com/deadroxy/valetbike/blob/master/notes/mac-setup.md)
+- [Windows Ruby on Rails Developer Environment Setup](https://github.com/deadroxy/valetbike/blob/master/notes/windows-setup.md)
+
+Be sure to complete all the installation procedures in the relevant guide before continuing on to the next step.
+
+### 2. Fork & clone the ValetBike repo
+
+- Click fork in the upper right hand corner of the ValetBike GitHub page
+- This creates a copy of the repository on your personal GitHub account
+- To access this code on your development machine, create a local copy of your fork with:\
+  `git clone https://github.com/<your_username>/valetbike.git`
+- Alternatively, you can also create a local copy of your fork using SSH remote with:\
+  `git@github.com:<your_username>/valetbike.git`
+- Note: you should run that command when you are in the folder where you want to store the repo\
+  (e.g. `/Users/<your_username>/Development`)
+
+### 3. Prepare the application
+
+- Enter the directory you just created: `cd valetbike`
+- Add `.tool-versions` to app directory to ensure the right ruby is always used: `asdf local ruby 3.1.2`
+- Install required gems with: `bundle install`
+
+### 4. Configure the database environment variables
+
+- Add a file called `.env` to the valetbike root directory
+- Ensure that it includes the credentials you setup when installing MySQL:
+
+```shell
+MYSQL_USERNAME=root
+MYSQL_PASSWORD=YOURPASSWORD
+MYSQL_SOCKET=/tmp/mysql.sock              # For Mac
+MYSQL_SOCKET=/var/run/mysqld/mysqld.sock  # For Windows
+```
+
+### 5. Prepare the database in MySQL
+
+- Use rails to create both the development and test databases with:\
+  `rake db:create`
+- Or use mysql to just create the development databse with:\
+  `mysql -u root -p`\
+  `CREATE DATABASE valetbike_development;`\
+  `exit`
+- Populate the database (by importing data from CSV files) with:\ 
+  `rake import_data:data`.
+- Then run the database migrations with:\
+  `rake db:migrate`
+
+### 6. Confirm that the app runs
+
+* Launch the web server using `rackup` or `rails s` (short for `rails server`) or `bin/dev`
+* If using `rackup` open http://localhost:9292 (or http://127.0.0.1:9292) in a browser
+* If using `rails s` or `bin/dev` open http://localhost:3000 (or http://127.0.0.1:3000) in a browser
+* You should see the ValetBike homepage
 
 ## Complete description of the MVP's functionality: 
 - **Log In/Sign Up/Forgot Password pages**:
