@@ -67,7 +67,7 @@ MYSQL_SOCKET=/var/run/mysqld/mysqld.sock  # For Windows
   `mysql -u root -p`\
   `CREATE DATABASE valetbike_development;`\
   `exit`
-- Populate the database (by importing data from CSV files) with:\ 
+- Populate the database (by importing data from CSV files) with:\
   `rake import_data:data`.
 - Then run the database migrations with:\
   `rake db:migrate`
