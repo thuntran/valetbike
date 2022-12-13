@@ -505,7 +505,6 @@ button.user-info {
 }
 
 .flip-card-back {
-  /*background-color: #61a961;*/
   background-color: #a3daa3;
   color: black;
   
@@ -565,11 +564,9 @@ button.user-info {
 }
 
 .form {
-  /*background-color: pink;*/
   border:#a3daa3; 
   border-width:5px; 
   border-style:solid;
-/*width: 400px;*/
 }
 
 aside {
@@ -588,6 +585,7 @@ aside {
 /*** Login ends ***/
 
 /*** Account page ***/
+
 .user-page-title {
   font-weight: bold;
   font-size: 18px;
@@ -619,6 +617,7 @@ aside {
 .link-btn:hover {     
   background-color: #5e5050;
 }
+
 /*** Link buttons end ***/
 
 /*** Flash alerts ***/

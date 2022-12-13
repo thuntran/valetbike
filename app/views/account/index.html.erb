@@ -25,9 +25,7 @@
                   <%if @currentlyRiding && ride == @mostRecentRide %>
                     <b>You're currently on this ride!</b><br/>
 
-                    <button class="select-button">
-                      <%= link_to 'End ride', edit_ride_path(ride.identifier) %> 
-                    </button>
+                      <%= link_to 'End ride', edit_ride_path(ride.identifier), :class => "select-button" %> 
 
 
                   <%else%>

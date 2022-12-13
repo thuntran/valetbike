@@ -12,9 +12,7 @@
         We hope you enjoyed your ValetBike ride, <%= User.find(@ride.user_id).username %>!
         <br/>
     <br/>
-    <button class="select-button" style="width: 145px;">
-      <%= link_to 'Rent another bike', '../../rides/index' %>
-    </button>
+      <%= link_to 'Rent another bike', '../../rides/index', :class => "select-button", :style => 'width: 145px;'%>
 
     <% else %> 
         <p> Select the station to which you are returning Bike <%= (Bike.find(@ride.bike_id)).identifier %>: </p>

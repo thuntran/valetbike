@@ -17,7 +17,6 @@
     <br/>
     <br/>
     <button type="submit" class="select-button">Select station</button>
-    <%# <input type="submit" value="Select station"> <!--is there a way to send the identifier as param instead of name?--> %>
   </form>
   
   <% if params[:station] or params[:bike]%>
@@ -44,9 +43,7 @@
 
     <% if current_user.balance >= 2.50 %>
 
-    <button class="select-button"  style="width: 83px;" id="start-button">
-      <%= link_to 'Start ride', ride_path(@chosenBike.identifier)%>
-    </button>
+      <%= link_to 'Start ride', ride_path(@chosenBike.identifier), :class => "select-button", :style => 'width: 83px;' %>
 
     <% else %>
       <% flash[:alert] = "Not enough funds to rent this bike!" %>
