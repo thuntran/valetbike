@@ -1,6 +1,5 @@
 # ValetBike
 
-Smith College CSC223: Software Engineering\
 Starter App for ValetBike project
 
 This app was built by Team Really Good Name (RGN):
@@ -67,10 +66,11 @@ MYSQL_SOCKET=/var/run/mysqld/mysqld.sock  # For Windows
   `mysql -u root -p`\
   `CREATE DATABASE valetbike_development;`\
   `exit`
+- Run the database migrations with:\
+  `rake db:migrate`
 - Populate the database (by importing data from CSV files) with:\
   `rake import_data:data`.
-- Then run the database migrations with:\
-  `rake db:migrate`
+
 
 ### 6. Confirm that the app runs
 
