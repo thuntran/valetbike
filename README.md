@@ -69,7 +69,7 @@ MYSQL_SOCKET=/var/run/mysqld/mysqld.sock  # For Windows
 - Run the database migrations with:\
   `rake db:migrate`
 - Populate the database (by importing data from CSV files) with:\
-  `rake import_data:data`.
+  `rake import_data:data`
 
 
 ### 6. Confirm that the app runs
